@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>szugers — coming soon</title>
+<meta name="description" content="szugers — wkrótce.">
+<meta name="theme-color" content="#fdf7fb">
+<meta name="color-scheme" content="light">
+
+<!-- Podgląd przy wysyłaniu linku -->
+<meta property="og:title" content="szugers">
+<meta property="og:description" content="Coming soon.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://szugers.com/">
+<meta property="og:image" content="https://szugers.com/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- <link rel="icon" href="/favicon.png"> -->
+
+<style>
+  :root {
+    --bg:      #fdf8fb;
+    --glow-a:  rgba(214, 51, 132, 0.14);
+    --glow-b:  rgba(126, 58, 142, 0.10);
+    --muted:   #9b7d92;
+    --faint:   #cbb6c5;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { height: 100%; margin: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--muted);
+    font-family: ui-rounded, "SF Pro Rounded", "Segoe UI", system-ui, -apple-system, sans-serif;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    text-align: center;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* miękka poświata w kolorach logo */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -20%;
+    background:
+      radial-gradient(45% 40% at 35% 40%, var(--glow-a), transparent 70%),
+      radial-gradient(45% 40% at 68% 60%, var(--glow-b), transparent 70%);
+    pointer-events: none;
+  }
+
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+    animation: rise 900ms cubic-bezier(.2,.7,.3,1) both;
+  }
+
+  .logo {
+    width: min(84vw, 620px);
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 10px 28px rgba(150, 40, 110, 0.18));
+  }
+
+  .tagline {
+    margin: 0;
+    font-size: clamp(12px, 3vw, 15px);
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+
+  .dot { display: inline-block; animation: blink 1.6s infinite; }
+  .dot:nth-of-type(2) { animation-delay: .2s; }
+  .dot:nth-of-type(3) { animation-delay: .4s; }
+
+  footer {
+    position: fixed;
+    bottom: 20px;
+    left: 0; right: 0;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--faint);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px) scale(.985); }
+    to   { opacity: 1; transform: none; }
+  }
+  @keyframes blink {
+    0%, 100% { opacity: .25; }
+    50%      { opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, body::before { animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <img class="logo" src="logo.svg" alt="szugers" width="1000" height="213">
+
+  <p class="tagline">
+    coming soon<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+  </p>
+</main>
+
+<footer>szugers.com</footer>
+
+</body>
+</html>
