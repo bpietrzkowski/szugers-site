@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności — Szugers</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1b1b1f; --soft: #5d5c63; --line: #dcdae2; --card: #f4f2f8; --accent: #6750a4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f0e13; --fg: #e9e5de; --soft: #a9a49b; --line: #2e2c38; --card: #17161d; --accent: #d0bcff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 20px 18px 56px; background: var(--bg); color: var(--fg);
+         font: 16px/1.6 "Segoe UI", Roboto, system-ui, -apple-system, sans-serif; }
+  main { max-width: 74ch; margin: 0 auto; }
+  h1 { font-size: 23px; margin: 0 0 4px; font-weight: 650; }
+  h2 { font-size: 18px; margin: 30px 0 8px; font-weight: 650; border-bottom: 1px solid var(--line); padding-bottom: 5px; }
+  h3 { font-size: 15.5px; margin: 20px 0 4px; font-weight: 650; }
+  p, li { font-size: 15px; }
+  .sub { color: var(--soft); font-size: 14px; margin: 0 0 18px; }
+  .lead { background: var(--card); border-left: 3px solid var(--accent); border-radius: 8px; padding: 12px 14px; margin: 16px 0 22px; }
+  .todo { background: #4a2c00; color: #ffd8a8; border-radius: 8px; padding: 10px 12px; font-size: 14px; margin: 14px 0; }
+  @media (prefers-color-scheme: light) { .todo { background: #fff3cd; color: #6b4a00; } }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0 18px; font-size: 14px; }
+  th, td { border: 1px solid var(--line); padding: 7px 9px; text-align: left; vertical-align: top; }
+  th { background: var(--card); }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: .9em; background: var(--card); padding: 1px 5px; border-radius: 4px; }
+  .foot { color: var(--soft); font-size: 13.5px; margin-top: 30px; border-top: 1px solid var(--line); padding-top: 12px; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Polityka prywatności aplikacji Szugers</h1>
+<p class="sub">Wersja 1.1 z 18 września 2026 roku. Dotyczy aplikacji na Androida, aplikacji na Wear OS i tarczy zegarka.</p>
+
+<div class="lead">
+<b>Najważniejsze w trzech zdaniach.</b> Szugers przechowuje wszystkie Twoje dane wyłącznie na Twoich urządzeniach,
+czyli na telefonie i na zegarku. Twórca aplikacji nie prowadzi serwera, nie ma bazy danych użytkowników i nie ma
+technicznej możliwości zobaczenia Twoich danych zdrowotnych. Dane opuszczają urządzenie tylko wtedy, gdy sam
+świadomie uruchomisz taką funkcję: gdy zalogujesz się własnym kontem do LibreLinkUp po odczyty glukozy, gdy wyślesz
+zapytanie do asystenta AI na własnym kluczu, albo gdy udostępnisz kartę posiłku innej aplikacji.
+</div>
+
+<h2>1. Administrator danych i zakres stosowania RODO</h2>
+<p>Aplikacja została zaprojektowana tak, że twórca nie przetwarza Twoich danych osobowych. Nie są mu one
+przekazywane, udostępniane ani powierzane. Nie istnieje żaden komponent serwerowy, do którego dane mogłyby trafić.</p>
+<p>Dane, które wprowadzasz do aplikacji, przetwarzasz na własnym urządzeniu i we własnym celu. Zgodnie z artykułem 2
+ustęp 2 litera c RODO przetwarzanie danych przez osobę fizyczną w ramach czynności o czysto osobistym lub domowym
+charakterze pozostaje poza zakresem rozporządzenia. Prowadzenie własnego dziennika cukrzycowego mieści się w tej
+kategorii.</p>
+<p>Twórca aplikacji: Bartosz Pietrzkowski, kontakt: <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.
+Twórca nie jest administratorem Twoich danych osobowych, bo ich nie przetwarza, dlatego nie podajemy adresu
+korespondencyjnego ani nie wyznaczono inspektora ochrony danych; obowiązek z artykułu 37 RODO nie powstaje.</p>
+<p>Jeżeli w przyszłości pojawi się jakakolwiek funkcja przesyłająca dane do twórcy, ta polityka zostanie zmieniona
+przed jej uruchomieniem, a zmiana będzie wymagała Twojej wyraźnej zgody.</p>
+
+<h2>2. Zakres tej polityki</h2>
+<p>Polityka dotyczy aplikacji mobilnej Szugers na Androida, aplikacji towarzyszącej na Wear OS, tarczy zegarka
+i widżetu ekranu głównego. Nie dotyczy usług podmiotów zewnętrznych, z którymi możesz połączyć aplikację — te usługi
+mają własne polityki prywatności i własnych administratorów.</p>
+
+<h2>3. Skąd Szugers bierze glukozę</h2>
+<p>Szugers nie łączy się z usługami producentów sensorów i nie obchodzi żadnych zabezpieczeń. Przy każdym odczycie
+pokazuje, skąd pochodzi i ile ma minut. Źródła są uporządkowane od najpewniejszego prawnie do najbardziej spornego
+i <b>domyślnie włączone są tylko Twoje własne wpisy</b>; każde inne włączasz sam w Menu → Źródła danych.</p>
+
+<table>
+<tr><th>Poziom</th><th>Źródło</th><th>Co to znaczy</th></tr>
+<tr><td>1</td><td>Twoje wpisy</td><td>Glukoza i dawki insuliny wpisane ręcznie w aplikacji. Dane nie opuszczają telefonu.</td></tr>
+<tr><td>2</td><td>Twoje urządzenia, bez pośredników</td><td>Pen NovoPen odczytany przez NFC, glukometr Bluetooth (w opracowaniu), zegarek jako źródło tętna i kroków. Bez konta, serwera i regulaminu producenta.</td></tr>
+<tr><td>3</td><td>Health Connect</td><td>Magazyn danych zdrowotnych prowadzony przez system Android. Szugers czyta tylko typy, na które wyrazisz zgodę, i zapisuje przy każdym odczycie nazwę aplikacji, która go tam umieściła.</td></tr>
+<tr><td>4</td><td>Twoje pliki i wnioski</td><td>Plik CSV pobrany przez Ciebie z LibreView albo Dexcom Clarity. Bez logowania i bez hasła. Kreator wniosków do producenta — w opracowaniu.</td></tr>
+<tr><td>5</td><td>Powiadomienia wybranych aplikacji</td><td>Po nadaniu dostępu w ustawieniach systemu wskazujesz, które aplikacje Szugers ma czytać. Z ich powiadomień bierzemy wyłącznie wartość glukozy, jednostkę, znak trendu i minutę publikacji. Powiadomienia innych aplikacji są odrzucane na wejściu i nie są zapisywane nawet tymczasowo.</td></tr>
+<tr><td>6</td><td>LibreLinkUp na Twoim koncie</td><td>Jedyne źródło łączące się z serwerem producenta. Włącza się po osobnym oświadczeniu, którego data jest zapisywana.</td></tr>
+<tr><td>7</td><td>Inne projekty</td><td>xDrip+ i Nightscout — wyłącznie przez Health Connect. Szugers nie zawiera ich kodu i nie wymaga ich instalacji.</td></tr>
+</table>
+
+<h2>4. Jakie dane aplikacja przetwarza na urządzeniu</h2>
+<p>Aplikacja zapisuje w lokalnej bazie danych następujące kategorie informacji. Część z nich stanowi dane dotyczące
+zdrowia, czyli szczególną kategorię danych w rozumieniu artykułu 9 ustęp 1 RODO.</p>
+<ul>
+  <li>Odczyty glukozy z któregokolwiek ze źródeł wymienionych w rozdziale 3, wraz z czasem pomiaru i etykietą źródła.</li>
+  <li>Dawki insuliny — wpisane ręcznie oraz odczytane z pena przez NFC, z oznaczeniem strzałów kontrolnych i wymian wkładu.</li>
+  <li>Posiłki: węglowodany, białko, tłuszcz, kalorie, cukry, indeks glikemiczny, nazwa i czas spożycia.</li>
+  <li>Dane z Health Connect, jeżeli włączysz tę integrację: sen, kroki, tętno, ćwiczenia, dystans, kalorie, piętra,
+      zmienność rytmu zatokowego, saturacja, częstość oddechu, temperatura skóry, masa ciała, ciśnienie krwi, nawodnienie.</li>
+  <li>Dane wysyłane bezpośrednio przez aplikację na zegarku, jeżeli wybierzesz to źródło: tętno, kroki, piętra oraz
+      momenty rozpoczęcia i zakończenia ćwiczenia.</li>
+  <li>Dane funkcji towarzyszących: plan dnia, lista zadań, notatki, wydarzenia odczytane z kalendarza urządzenia.</li>
+  <li>Ustawienia aplikacji, w tym Twoje progi glikemii, kolory i układ kart.</li>
+  <li>Poświadczenia do usług zewnętrznych, które sam wprowadzisz — w postaci zaszyfrowanej; szczegóły w rozdziale 9.</li>
+</ul>
+<p>Zdjęcie etykiety produktu <b>nie jest zapisywane</b>. Trafia bezpośrednio do modułu rozpoznawania tekstu działającego
+na urządzeniu i jest odrzucane natychmiast po odczycie wartości odżywczych. Treść powiadomień innych aplikacji
+<b>nie jest zapisywana</b> — z powiadomień wskazanych przez Ciebie aplikacji zapisujemy wyłącznie liczby wymienione
+w rozdziale 3.</p>
+
+<h2>5. W jakim celu aplikacja przetwarza te dane</h2>
+<p>Wyłącznie po to, żeby pokazać Ci Twoje własne dane historyczne i zestawić je z bieżącym poziomem cukru. Aplikacja
+agreguje, uśrednia, porównuje i wizualizuje to, co sam do niej wprowadziłeś albo pobrałeś z własnych źródeł. Nie dodaje
+wiedzy medycznej z zewnątrz.</p>
+<p>Aplikacja nie udziela porad medycznych i nie proponuje dawek insuliny. Nie podejmuje wobec Ciebie zautomatyzowanych
+decyzji wywołujących skutki prawne ani w podobny sposób istotnie na Ciebie wpływających, o których mowa w artykule 22
+RODO. Wszystkie wskaźniki, strzałki trendu i wykresy są opisem przeszłości, a nie zaleceniem na przyszłość.</p>
+
+<h2>6. Podstawa prawna przetwarzania</h2>
+<p>W zakresie, w jakim RODO w ogóle znajduje zastosowanie, podstawy przedstawiają się następująco.</p>
+<table>
+<tr><th>Czynność</th><th>Podstawa z artykułu 6</th><th>Podstawa z artykułu 9</th></tr>
+<tr><td>Prowadzenie dziennika na własnym urządzeniu</td><td>Poza zakresem RODO, artykuł 2 ustęp 2 litera c</td><td>Nie dotyczy</td></tr>
+<tr><td>Połączenie z kontem LibreLinkUp</td><td>Ustęp 1 litera b, wykonanie umowy z Abbott zawartej przez Ciebie</td><td>Ustęp 2 litera a, Twoja wyraźna zgoda wobec Abbott</td></tr>
+<tr><td>Odczyt i zapis w Health Connect</td><td>Ustęp 1 litera a, zgoda wyrażona w oknie systemowym</td><td>Ustęp 2 litera a, zgoda dla każdego typu danych osobno</td></tr>
+<tr><td>Odczyt powiadomień wskazanych aplikacji</td><td>Ustęp 1 litera a, zgoda przez nadanie dostępu w ustawieniach systemu po ekranie ujawnienia</td><td>Ustęp 2 litera a, zgoda przez wskazanie konkretnych aplikacji</td></tr>
+<tr><td>Import pliku CSV</td><td>Ustęp 1 litera a, zgoda przez wskazanie pliku</td><td>Ustęp 2 litera a, ta sama czynność</td></tr>
+<tr><td>Wysłanie zapytania do asystenta AI</td><td>Ustęp 1 litera a, zgoda przez naciśnięcie przycisku</td><td>Ustęp 2 litera a, zgoda jednorazowa dla konkretnego zapytania</td></tr>
+<tr><td>Odczyt kalendarza urządzenia</td><td>Ustęp 1 litera a, zgoda systemowa</td><td>Nie dotyczy</td></tr>
+</table>
+<p>Każdą zgodę możesz wycofać w dowolnym momencie, wyłączając daną integrację w Menu → Źródła danych albo odbierając
+uprawnienie w ustawieniach systemu. Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania dokonanego przed jej
+wycofaniem, zgodnie z artykułem 7 ustęp 3 RODO.</p>
+
+<h2>7. Komu dane mogą zostać przekazane</h2>
+<p>Aplikacja nie przekazuje danych nikomu z własnej inicjatywy. Przekazanie następuje tylko wtedy, gdy sam włączysz
+daną funkcję. Poniżej pełna lista możliwych odbiorców.</p>
+<table>
+<tr><th>Odbiorca</th><th>Co dostaje</th><th>Kiedy</th></tr>
+<tr><td>Abbott, usługa LibreLinkUp</td><td>Twój adres e-mail i hasło w chwili logowania (hasło nie jest zapisywane), a potem zapytania o Twoje odczyty na zapisanym tokenie sesji</td><td>Gdy złożysz oświadczenie i zalogujesz się w Menu → Źródła danych</td></tr>
+<tr><td>Google, Health Connect</td><td>Odczyty glukozy, spożycie w posiłkach i dawki insuliny, jeżeli włączysz zapis</td><td>Magazyn na Twoim urządzeniu — dane nie opuszczają telefonu</td></tr>
+<tr><td>Anthropic albo Google AI Studio</td><td>Treść zapytania, czyli kontekst posiłku bez Twoich danych identyfikujących</td><td>Gdy naciśniesz przycisk zapytania, na Twoim własnym kluczu API</td></tr>
+<tr><td>Aplikacja wybrana przy udostępnianiu</td><td>Karta posiłku w postaci tekstu</td><td>Gdy sam wskażesz aplikację w oknie udostępniania</td></tr>
+<tr><td>Aplikacja wybrana przy eksporcie</td><td>Plik CSV albo kopia bazy, które sam zapisujesz</td><td>Gdy wskażesz miejsce zapisu w oknie systemowym</td></tr>
+</table>
+<p>Aplikacja nie zawiera reklam, narzędzi analitycznych ani bibliotek śledzących, nie korzysta z identyfikatora
+reklamowego i nie tworzy profilu marketingowego. Nie sprzedaje ani nie wynajmuje danych. Odczyt powiadomień innych
+aplikacji odbywa się w całości na urządzeniu i nie wiąże się z przekazaniem czegokolwiek komukolwiek.</p>
+
+<h2>8. Przekazywanie danych poza Europejski Obszar Gospodarczy</h2>
+<p>Twórca aplikacji nie przekazuje danych do państw trzecich, ponieważ ich nie otrzymuje. Rozdział V RODO nie znajduje
+wobec niego zastosowania.</p>
+<p>Jeżeli włączysz asystenta AI, treść zapytania trafia do serwerów wybranego dostawcy, w tym poza Europejski Obszar
+Gospodarczy. Podstawy takiego transferu, w szczególności standardowe klauzule umowne i decyzje o odpowiednim stopniu
+ochrony, określa dostawca w swojej polityce prywatności. Analogicznie połączenie z LibreLinkUp odbywa się na warunkach
+Abbott.</p>
+
+<h2>9. Bezpieczeństwo danych</h2>
+<p>Środki techniczne i organizacyjne odpowiadają wymogom artykułu 32 RODO przy uwzględnieniu tego, że przetwarzanie
+jest w całości lokalne.</p>
+<ul>
+  <li>Baza aplikacji leży w prywatnym katalogu aplikacji, do którego inne aplikacje nie mają dostępu dzięki izolacji
+      systemu Android, i jest objęta szyfrowaniem pamięci urządzenia.</li>
+  <li><b>Kopia zapasowa w chmurze Google jest dla Szugers wyłączona</b>, podobnie jak przenoszenie danych aplikacji na
+      nowe urządzenie. Dane zdrowotne nie trafiają więc na serwery Google przy tworzeniu kopii zapasowej telefonu.
+      Konsekwencja: po odinstalowaniu albo zmianie telefonu dane nie wrócą same — przeniesiesz je przez eksport do pliku.</li>
+  <li>Token sesji LibreLinkUp oraz klucze API asystenta są szyfrowane algorytmem AES w trybie GCM kluczem generowanym
+      w sprzętowym magazynie kluczy Androida. Klucz nigdy nie opuszcza urządzenia i nie da się go wyeksportować.
+      Hasła do LibreLinkUp aplikacja nie zapisuje w ogóle.</li>
+  <li>Cała komunikacja sieciowa odbywa się po HTTPS.</li>
+  <li>Nie istnieje centralna baza danych użytkowników, więc nie istnieje ryzyko wycieku dotyczącego wielu osób naraz.
+      To najważniejszy pojedynczy efekt przyjętej architektury.</li>
+  <li>Wymiana danych z zegarkiem odbywa się w obrębie Twojego sparowanego zestawu urządzeń, kanałem systemowym Wear OS.</li>
+</ul>
+<p>Największym realnym ryzykiem pozostaje utrata lub kradzież odblokowanego urządzenia. Dlatego zalecamy blokadę ekranu
+i szyfrowanie pamięci telefonu, które w nowoczesnych urządzeniach z Androidem jest włączone domyślnie.</p>
+
+<h2>10. Jak długo dane są przechowywane</h2>
+<p>Tak długo, jak sam zdecydujesz. Dane leżą w bazie aplikacji na Twoim urządzeniu i nie mają żadnego automatycznego
+terminu usunięcia, ponieważ dziennik choroby przewlekłej ma sens tylko wtedy, gdy sięga wstecz.</p>
+<p>W każdej chwili możesz usunąć pojedyncze wpisy w aplikacji, wyeksportować całość do plików CSV albo kopii bazy,
+użyć przycisku <b>Menu → Eksport danych → „Usuń wszystkie dane”</b> (kasuje bazę, wszystkie ustawienia, poświadczenia
+i dane plakietki na zegarku), wyczyścić dane aplikacji w ustawieniach systemu albo odinstalować aplikację.</p>
+<p>Rekordy, które na Twoje polecenie zostały zapisane w Health Connect, pozostają w Health Connect — to magazyn systemu,
+nie nasz. Usuwasz je w aplikacji Health Connect.</p>
+
+<h2>11. Twoje prawa</h2>
+<p>Ponieważ dane pozostają w Twoim wyłącznym władaniu, prawa z artykułów 15 do 21 RODO realizujesz bezpośrednio
+w aplikacji, bez pośrednictwa kogokolwiek.</p>
+<table>
+<tr><th>Prawo</th><th>Jak je wykonać w Szugers</th></tr>
+<tr><td>Dostęp i kopia danych, artykuł 15</td><td>Przeglądasz dane w aplikacji, pełną kopię pobierasz przez eksport</td></tr>
+<tr><td>Sprostowanie, artykuł 16</td><td>Edytujesz wpis w karcie posiłków, iniekcji albo odczyt glukozy w HUB</td></tr>
+<tr><td>Usunięcie, artykuł 17</td><td>Kasujesz wpis, używasz „Usuń wszystkie dane” albo odinstalowujesz aplikację</td></tr>
+<tr><td>Ograniczenie, artykuł 18</td><td>Wyłączasz wybrane źródło w Menu → Źródła danych</td></tr>
+<tr><td>Przenoszenie, artykuł 20</td><td>Eksport do plików CSV w formacie nadającym się do odczytu maszynowego</td></tr>
+<tr><td>Sprzeciw, artykuł 21</td><td>Wyłączasz funkcję albo odinstalowujesz aplikację</td></tr>
+</table>
+<p>Wobec dostawców usług zewnętrznych, czyli Abbott i dostawcy asystenta AI, prawa te realizujesz na zasadach opisanych
+w ich politykach prywatności i bezpośrednio u nich. Niezależnie od powyższego przysługuje Ci prawo wniesienia skargi do
+organu nadzorczego, którym w Polsce jest Prezes Urzędu Ochrony Danych Osobowych, ulica Stawki 2, 00-193 Warszawa.</p>
+
+<h2>12. Prywatność w fazie projektowania i domyślna ochrona danych</h2>
+<p><b>Privacy by design.</b> Na etapie projektu podjęto decyzję o rezygnacji z jakiegokolwiek zaplecza serwerowego.
+Nie ma konta użytkownika w Szugers, nie ma logowania do usługi twórcy, nie ma synchronizacji w chmurze i nie ma kopii
+zapasowej po stronie twórcy. Nie powstało zatem miejsce, w którym dane mogłyby zostać zgromadzone, a więc również
+miejsce, z którego mogłyby wyciec. Minimalizacja danych jest tu konsekwencją architektury, a nie polityki, którą można
+jednostronnie zmienić.</p>
+<p><b>Privacy by default.</b> Wszystkie źródła poza Twoimi własnymi wpisami są domyślnie wyłączone: odczyt i zapis
+Health Connect, odczyt powiadomień, LibreLinkUp (dodatkowo za osobnym oświadczeniem), asystent AI, odczyt kalendarza
+oraz przypomnienia „Zajrzyj do danych”. Każdy typ danych z Health Connect wymaga osobnej zgody, a nie zgody zbiorczej.
+Aplikacja nie prosi o żadne uprawnienie zapasowo, na przyszłość ani na wypadek, gdyby kiedyś się przydało.</p>
+<p>Kod aplikacji nie zawiera żadnego zestawu narzędzi analitycznych ani reklamowych, co można zweryfikować w liście
+bibliotek.</p>
+
+<h2>13. Dzieci</h2>
+<p>Aplikacja jest przeznaczona dla osób pełnoletnich i nie jest kierowana do dzieci. Twórca nie zbiera świadomie danych
+osób poniżej szesnastego roku życia. Jeżeli aplikacja jest używana przez osobę niepełnoletnią, powinno się to odbywać
+pod nadzorem opiekuna prawnego, który odpowiada za konfigurację urządzenia i integracji.</p>
+
+<h2>14. Zastrzeżenie medyczne</h2>
+<p>Szugers to przeglądarka Twoich własnych danych. Nie jest wyrobem medycznym, nie ocenia, nie zaleca, nie prognozuje
+i nie ostrzega. Nie zastępuje aplikacji producenta czujnika, jej alarmów ani wskazań lekarza. Dane mogą być opóźnione
+lub niepełne; decyzje dotyczące leczenia podejmuj na podstawie wskazań urządzeń medycznych i zaleceń lekarza.</p>
+<p>Wszystkie wykresy działania insuliny są poglądowe. Liczy je uproszczony model oparty na danych producenta i nie
+odzwierciedla on rzeczywistego działania insuliny w Twoim organizmie, Twojej insulinooporności, miejsca wstrzyknięcia,
+wysiłku fizycznego, infekcji ani tempa wchłaniania.</p>
+
+<h2>15. Znaki towarowe</h2>
+<p>FreeStyle, Libre, LibreLinkUp i LibreView są znakami towarowymi Abbott. Dexcom jest znakiem towarowym Dexcom, Inc.
+NovoPen jest znakiem towarowym Novo Nordisk A/S. Nazwy są użyte wyłącznie w celu wskazania kompatybilności. Szugers nie
+jest powiązany z tymi firmami, nie jest przez nie wspierany ani zatwierdzony.</p>
+
+<h2>16. Zmiany polityki</h2>
+<p>O istotnych zmianach poinformujemy komunikatem w samej aplikacji, a po publikacji w sklepie także w opisie
+aktualizacji. Poprzednie wersje polityki będą dostępne pod tym samym adresem. Data ostatniej zmiany: 18 września 2026.
+Adres publikacji polityki: <a href="https://szugers.com/polityka-prywatnosci.html">szugers.com/polityka-prywatnosci.html</a>.
+Ta sama treść jest wbudowana w aplikację i dostępna bez internetu w Menu → O aplikacji → Polityka prywatności.</p>
+
+<p class="foot">Szugers — dziennik cukrzycowy. Wersja polityki 1.1 z 18 września 2026.</p>
+
+</main>
+</body>
+</html>
