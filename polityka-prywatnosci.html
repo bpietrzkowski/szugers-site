@@ -36,7 +36,7 @@
 <main>
 
 <h1>Polityka prywatności aplikacji Szugers</h1>
-<p class="sub">Wersja 1.1 z 18 września 2026 roku. Dotyczy aplikacji na Androida, aplikacji na Wear OS i tarczy zegarka.</p>
+<p class="sub">Wersja 1.2 z 21 września 2026 roku. Dotyczy aplikacji na Androida, aplikacji na Wear OS i tarczy zegarka.</p>
 
 <div class="lead">
 <b>Najważniejsze w trzech zdaniach.</b> Szugers przechowuje wszystkie Twoje dane wyłącznie na Twoich urządzeniach,
@@ -72,9 +72,9 @@ i <b>domyślnie włączone są tylko Twoje własne wpisy</b>; każde inne włąc
 <table>
 <tr><th>Poziom</th><th>Źródło</th><th>Co to znaczy</th></tr>
 <tr><td>1</td><td>Twoje wpisy</td><td>Glukoza i dawki insuliny wpisane ręcznie w aplikacji. Dane nie opuszczają telefonu.</td></tr>
-<tr><td>2</td><td>Twoje urządzenia, bez pośredników</td><td>Pen NovoPen odczytany przez NFC, glukometr Bluetooth (w opracowaniu), zegarek jako źródło tętna i kroków. Bez konta, serwera i regulaminu producenta.</td></tr>
+<tr><td>2</td><td>Twoje urządzenia, bez pośredników</td><td>Pen NovoPen odczytany przez NFC, glukometr Bluetooth w publicznym standardzie Glucose Service&nbsp;0x1808, zegarek jako źródło tętna i kroków. Bez konta, serwera i regulaminu producenta. Z glukometrem aplikacja łączy się wyłącznie wtedy, gdy sam sparujesz go w ustawieniach systemu; nie skanuje otoczenia i nie prosi o dostęp do lokalizacji. Pobrane pomiary zostają w pamięci telefonu, tak jak wszystkie pozostałe dane.</td></tr>
 <tr><td>3</td><td>Health Connect</td><td>Magazyn danych zdrowotnych prowadzony przez system Android. Szugers czyta tylko typy, na które wyrazisz zgodę, i zapisuje przy każdym odczycie nazwę aplikacji, która go tam umieściła.</td></tr>
-<tr><td>4</td><td>Twoje pliki i wnioski</td><td>Plik CSV pobrany przez Ciebie z LibreView albo Dexcom Clarity. Bez logowania i bez hasła. Kreator wniosków do producenta — w opracowaniu.</td></tr>
+<tr><td>4</td><td>Twoje pliki i wnioski</td><td>Plik CSV pobrany przez Ciebie z LibreView albo Dexcom Clarity. Bez logowania i bez hasła. Kreator wniosków składa gotowy tekst wniosku do producenta i oddaje go do schowka — Szugers sam niczego nie wysyła, a na czas bety wysyłka z aplikacji jest wyłączona.</td></tr>
 <tr><td>5</td><td>Powiadomienia wybranych aplikacji</td><td>Po nadaniu dostępu w ustawieniach systemu wskazujesz, które aplikacje Szugers ma czytać. Z ich powiadomień bierzemy wyłącznie wartość glukozy, jednostkę, znak trendu i minutę publikacji. Powiadomienia innych aplikacji są odrzucane na wejściu i nie są zapisywane nawet tymczasowo.</td></tr>
 <tr><td>6</td><td>LibreLinkUp na Twoim koncie</td><td>Jedyne źródło łączące się z serwerem producenta. Włącza się po osobnym oświadczeniu, którego data jest zapisywana.</td></tr>
 <tr><td>7</td><td>Inne projekty</td><td>xDrip+ i Nightscout — wyłącznie przez Health Connect. Szugers nie zawiera ich kodu i nie wymaga ich instalacji.</td></tr>
@@ -173,6 +173,11 @@ terminu usunięcia, ponieważ dziennik choroby przewlekłej ma sens tylko wtedy,
 <p>W każdej chwili możesz usunąć pojedyncze wpisy w aplikacji, wyeksportować całość do plików CSV albo kopii bazy,
 użyć przycisku <b>Menu → Eksport danych → „Usuń wszystkie dane”</b> (kasuje bazę, wszystkie ustawienia, poświadczenia
 i dane plakietki na zegarku), wyczyścić dane aplikacji w ustawieniach systemu albo odinstalować aplikację.</p>
+<p><b>Sprzątanie z możliwością cofnięcia.</b> Dwa narzędzia porządkowe — „Duplikaty dawek” i „Kontrola danych” —
+usuwają wiersze, o których sam zdecydujesz, i zapisują je w pliku w prywatnym katalogu aplikacji, żeby dało się
+to cofnąć. Znaczy to, że przez pewien czas usunięte wpisy nadal są na Twoim telefonie: do następnego sprzątania
+tego samego rodzaju, do użycia guzika „Cofnij” albo do „Usuń wszystkie dane”, które kasuje także te pliki.
+Nie opuszczają telefonu i nie trafiają do nikogo.</p>
 <p>Rekordy, które na Twoje polecenie zostały zapisane w Health Connect, pozostają w Health Connect — to magazyn systemu,
 nie nasz. Usuwasz je w aplikacji Health Connect.</p>
 
@@ -229,7 +234,7 @@ aktualizacji. Poprzednie wersje polityki będą dostępne pod tym samym adresem.
 Adres publikacji polityki: <a href="https://szugers.com/polityka-prywatnosci.html">szugers.com/polityka-prywatnosci.html</a>.
 Ta sama treść jest wbudowana w aplikację i dostępna bez internetu w Menu → O aplikacji → Polityka prywatności.</p>
 
-<p class="foot">Szugers — dziennik cukrzycowy. Wersja polityki 1.1 z 18 września 2026.</p>
+<p class="foot">Szugers — dziennik cukrzycowy. Wersja polityki 1.2 z 21 września 2026.</p>
 
 </main>
 </body>
