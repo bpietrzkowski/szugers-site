@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Polityka prywatności — Harmo</title>
-<meta name="description" content="Polityka prywatności aplikacji Harmo. Privacy policy · Política de privacidade · Política de privacidad.">
+<meta name="description" content="Polityka prywatności Harmo (Android, Wear OS, Chrome). Privacy policy · Política de privacidade · Política de privacidad.">
 <style>
   :root {
     --bg: #ffffff; --fg: #1b1b1f; --soft: #5d5c63; --line: #dcdae2; --card: #f4f2f8; --accent: #c15f3c;
@@ -32,6 +32,12 @@
   /* Bez JavaScriptu widać wszystkie języki, jeden pod drugim. */
   .js section[lang] { display: none; }
   .js section[lang].on { display: block; }
+  h3 { font-size: 16px; margin: 18px 0 4px; font-weight: 650; }
+  td, th { font-size: 15px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 4px; }
+  th, td { text-align: left; vertical-align: top; padding: 7px 8px; border-bottom: 1px solid var(--line); }
+  th { font-weight: 650; color: var(--soft); font-size: 13.5px; }
+  h2[id] { scroll-margin-top: 12px; }
 </style>
 <script>document.documentElement.className = 'js';</script>
 </head>
@@ -47,234 +53,675 @@
 
 <!-- ============================== PL ============================== -->
 <section id="pl" lang="pl">
-<h1>Polityka prywatności aplikacji Harmo</h1>
-<p class="sub">Wersja 1.0 z 22 października 2026 roku. Dotyczy aplikacji Harmo na Androida, aplikacji na Wear OS, jej plansz i widżetów.</p>
+<h1>Polityka prywatności Harmo</h1>
+<p class="sub">Wersja 2.0 z 7 listopada 2026 r. Dotyczy aplikacji Harmo na Androida,
+aplikacji Harmo na zegarki z Wear OS (z planszami i widżetami) oraz rozszerzenia Harmo dla Chrome.</p>
 
 <div class="lead">
-<b>Krótko.</b> Harmo trzyma Twój plan wyłącznie na Twoim telefonie i zegarku. Twórca aplikacji nie prowadzi serwera,
-na który aplikacja wysyłałaby zadania, projekty czy notatki. Harmo nie zbiera statystyk, nie wyświetla reklam i nie
-używa narzędzi śledzących.
+<b>W skrócie: nie przetwarzamy Twoich danych osobowych.</b> Harmo nie ma serwera, konta użytkownika ani dostępu do
+internetu. Twoje zadania, projekty i notatki zostają na Twoich urządzeniach: telefonie, zegarku i komputerze.
+Urządzenia łączą się ze sobą bezpośrednio, bez pośrednictwa chmury (o kopii zapasowej w Google, którą możesz włączyć, piszemy w <a href="#pl-kopia">punkcie 5</a>). Nie zbieramy statystyk, nie wyświetlamy reklam
+i nie używamy narzędzi analitycznych ani śledzących. Dlatego nie mamy dostępu do Twojego planu i nie możemy go
+nikomu przekazać, nawet gdybyśmy chcieli.
 </div>
 
-<h2>1. Twórca aplikacji</h2>
-<p>Twórca aplikacji: Bartosz Pietrzkowski (Szugers), kontakt: <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
-<p>Harmo jest zaprojektowana tak, że twórca nie przetwarza Twoich danych osobowych: nie są mu przekazywane, udostępniane
-ani powierzane i nie istnieje serwer, na który mogłyby trafić. Dlatego twórca nie jest administratorem Twoich danych
-w rozumieniu RODO.</p>
+<h2>1. Kto udostępnia Harmo</h2>
+<p>Harmo udostępnia Bartosz Pietrzkowski, pod marką Szugers (<a href="https://szugers.com">szugers.com</a>). Kontakt w sprawach prywatności: <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
+<p>W tej polityce piszemy o sobie „my”.</p>
 
-<h2>2. Jakie dane przetwarza aplikacja</h2>
+<h2>2. Dlaczego nie jesteśmy administratorem Twoich danych w aplikacji</h2>
+<p>Harmo zaprojektowaliśmy tak, żeby dane, które w niej zapisujesz, nigdy do nas nie trafiały. Nie są nam przekazywane,
+udostępniane ani powierzane, i nie istnieje serwer, na który mogłyby trafić. Aplikacja na telefon i na zegarek nie ma
+uprawnienia dostępu do internetu, a rozszerzenie dla Chrome ma zablokowane wszystkie połączenia sieciowe.</p>
+<p>Dane zapisujesz i przetwarzasz sam, na własnych urządzeniach. Dlatego w odniesieniu do treści Twojego planu nie jesteśmy
+administratorem danych w rozumieniu RODO (rozporządzenia UE 2016/679). Jeśli używasz Harmo do planowania własnego dnia,
+takie przetwarzanie ma czysto osobisty charakter i zgodnie z art. 2 ust. 2 lit. c RODO pozostaje poza zakresem
+rozporządzenia. Nie wyznaczyliśmy inspektora ochrony danych, bo obowiązek z art. 37 RODO nie powstaje. Wyjątki, w których rzeczywiście przetwarzamy
+jakieś dane, opisujemy uczciwie w punktach 6 i 7.</p>
+
+<h2>3. Co Harmo zapisuje na Twoich urządzeniach</h2>
 <ul>
-  <li><b>Twój plan:</b> zadania, projekty, zadania cykliczne, notatki, czas szacowany i rzeczywisty, postęp. Zapisuje je baza danych na Twoim urządzeniu.</li>
-  <li><b>Ustawienia:</b> wygląd, język, pora snu i pobudki, widok startowy oraz data pierwszego uruchomienia (do liczenia okresu próbnego).</li>
+  <li><b>Twój plan:</b> zadania, projekty, zadania cykliczne, szablony, notatki i karteczki, czas planowany i rzeczywisty,
+  postęp. Zapisuje je baza danych w pamięci telefonu, dostępna tylko dla Harmo.</li>
+  <li><b>Ustawienia:</b> wygląd, język, pora snu i pobudki, widok startowy, wygląd widżetów, data pierwszego uruchomienia
+  (do liczenia okresu próbnego) i informacja, czy Harmo jest kupiona.</li>
+  <li><b>Na zegarku:</b> ostatni plan dnia i Lista, które zegarek dostał z telefonu.</li>
+  <li><b>W Chrome:</b> klucze parowania z Twoim telefonem i ustawienia widoku. Sam plan jest w Chrome tylko w pamięci,
+  dopóki karta Harmo jest otwarta.</li>
 </ul>
-<p>Te dane nie trafiają do twórcy ani do nikogo innego.</p>
+<p>Te dane możesz w każdej chwili usunąć: odinstalowując aplikację lub rozszerzenie albo czyszcząc dane aplikacji
+w ustawieniach Androida.</p>
 
-<h2>3. Kiedy dane opuszczają telefon</h2>
-<p>Tylko w trzech sytuacjach. Każdą z nich obsługują usługi Google na Twoim koncie, a nie twórca aplikacji:</p>
-<ol>
-  <li><b>Zegarek.</b> Jeśli masz Harmo na zegarku z Wear OS, telefon wysyła mu plan dnia i Listę tylko wtedy, gdy zegarek
-  jest obok telefonu. Dane idą bezpośrednio między Twoimi urządzeniami, szyfrowanym połączeniem Usług Google Play, i nie są
-  zapisywane w chmurze Google. Gdy zegarka nie ma obok, nic nie jest wysyłane, a zegarek pokazuje ostatni plan, jaki dostał.</li>
-  <li><b>Kopia zapasowa Androida.</b> Jeśli masz włączoną kopię zapasową Google, Android może zapisać na Twoim koncie Google
-  dane aplikacji (w tym plan i datę pierwszego uruchomienia), żeby przywrócić je na nowym telefonie lub po ponownej instalacji.
-  Kopię możesz wyłączyć w ustawieniach Androida.</li>
-  <li><b>Zakup.</b> Zakup Harmo obsługuje Google Play. Twórca nie widzi Twoich danych płatniczych; Google Play przekazuje
-  aplikacji tylko potwierdzenie, że jest kupiona.</li>
-</ol>
+<h2>4. Jak Twoje urządzenia łączą się ze sobą</h2>
+<h3>Telefon i zegarek</h3>
+<p>Telefon wysyła zegarkowi plan dnia i Listę tylko wtedy, gdy zegarek jest w pobliżu. Wiadomości idą bezpośrednio między
+Twoimi urządzeniami, szyfrowanym połączeniem Usług Google Play dla Wear OS, i nie są zapisywane w chmurze Google (kopię zapasową w Google opisuje <a href="#pl-kopia">punkt 5</a>).
+Gdy zegarka nie ma obok, nic nie jest wysyłane. Aplikacja na zegarek nie tworzy kopii zapasowej.</p>
+<h3>Telefon i komputer (Harmo dla Chrome)</h3>
+<p>Rozszerzenie łączy się z Twoim telefonem przez Bluetooth: przy pierwszym parowaniu przez Web Bluetooth, a potem przez
+port szeregowy Bluetooth (Web Serial). Każde połączenie zatwierdzasz w oknie wyboru Chrome, które pokazuje tylko
+urządzenia z usługą Harmo. Plan płynie bezpośrednio między telefonem a komputerem. Rozszerzenie nie ma uprawnień do
+stron, kart ani historii przeglądania, nie odczytuje treści stron, a jego polityka bezpieczeństwa blokuje wszystkie
+połączenia z siecią. Klucze parowania są zapisane tylko lokalnie w Chrome (nie są synchronizowane z kontem Google; jedyną kopię w Google opisuje <a href="#pl-kopia">punkt 5</a>).</p>
+<p>Gdy telefon jest połączony z komputerem, Android pokazuje stałe powiadomienie Harmo. To wymóg systemu dla usług,
+które działają w tle.</p>
 
-<h2>4. Uprawnienia</h2>
-<p>Harmo nie ma dostępu do internetu: aplikacja na telefon i na zegarek nie ma uprawnienia „pełny dostęp do sieci”.
-Nie prosi też o dostęp do kontaktów, lokalizacji, aparatu, mikrofonu ani plików. Zakup obsługuje aplikacja Sklep Google Play.</p>
+<h2 id="pl-kopia">5. Kopia zapasowa i przeniesienie na nowy telefon</h2>
+<p>Harmo korzysta z wbudowanej kopii zapasowej Androida. To funkcja systemu i Twojego konta Google, nie nasza: kopia
+trafia na Twoje konto Google, a my nie mamy do niej dostępu. Co trafia do kopii, zależy od dwóch ustawień:</p>
+<ul>
+  <li><b>Przełącznik „Kopia zadań w Google”</b> w Ustawieniach Harmo, w części Prywatność. <b>Domyślnie jest wyłączony.</b>
+  Gdy jest wyłączony, zadania, notatki i karteczki nie trafiają do kopii w chmurze. Gdy go włączysz, kopia zapasowa
+  Androida zapisuje na Twoim koncie Google cały plan, żeby przywrócić go na nowym telefonie lub po ponownej instalacji.</li>
+  <li><b>Kopia zapasowa Google w ustawieniach Androida.</b> Jeśli jest włączona, nawet przy wyłączonym przełączniku Harmo
+  do kopii trafiają same ustawienia aplikacji: wygląd, język, wygląd widżetów, data pierwszego uruchomienia i informacja
+  o zakupie. Dzięki temu po ponownej instalacji okres próbny i zakup nie zaczynają się od nowa. Kopię możesz w każdej
+  chwili wyłączyć w ustawieniach Androida.</li>
+</ul>
+<p>Gdy przenosisz dane na nowy telefon kablem albo bezpośrednio z telefonu na telefon, Android przenosi cały plan,
+bo dane nie opuszczają wtedy Twoich urządzeń.</p>
+<p>Kopię zapasową na koncie Google przechowuje i zabezpiecza Google, zgodnie z
+<a href="https://policies.google.com/privacy?hl=pl">Polityką prywatności Google</a>.</p>
 
-<h2>5. Twoje prawa i usuwanie danych</h2>
-<p>Twoje dane są na Twoim urządzeniu, więc masz nad nimi pełną kontrolę. Usuniesz je, odinstalowując aplikację albo
-czyszcząc jej dane w ustawieniach Androida. Twórca nie przechowuje Twoich danych, więc po jego stronie nie ma czego
-udostępnić, poprawić ani usunąć. W sprawie prywatności napisz: <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
+<h2>6. Zakup</h2>
+<p>Harmo przez 5 tygodni działa w pełnej wersji, a potem można ją kupić w Google Play.
+Płatność w całości obsługuje Google Play. Nie widzimy Twoich danych płatniczych. Aplikacja dostaje od Google Play
+tylko potwierdzenie zakupu i zapisuje je na Twoim telefonie.</p>
+<p>Jako sprzedawca dostajemy od Google w Konsoli Play dane zamówienia potrzebne do rozliczeń, np. numer zamówienia,
+produkt, kwotę i kraj. Przetwarzamy je wyłącznie w celu rozliczeń podatkowych i obsługi reklamacji (art. 6 ust. 1
+lit. c i f RODO) i przechowujemy przez okres wymagany przepisami podatkowymi. Zakupy w Google Play opisuje
+<a href="https://policies.google.com/privacy?hl=pl">Polityka prywatności Google</a>.</p>
 
-<h2>6. Dzieci</h2>
-<p>Harmo nie jest kierowana do dzieci poniżej 13 lat.</p>
+<h2>7. Gdy do nas napiszesz</h2>
+<p>Jeśli wyślesz nam e-mail, na przykład z pytaniem lub zgłoszeniem błędu, przetwarzamy Twój adres e-mail i treść
+wiadomości, żeby odpowiedzieć (art. 6 ust. 1 lit. f RODO: nasz uzasadniony interes w prowadzeniu korespondencji).
+Nie używamy ich do marketingu. Korespondencję przechowujemy tak długo, jak jest potrzebna do załatwienia sprawy,
+a potem ją usuwamy, chyba że przepisy wymagają jej zachowania. W tym zakresie przysługują Ci prawa opisane
+w punkcie 10.</p>
+<p>Nie wysyłaj nam swojego planu ani zrzutów ekranu z danymi, których nie chcesz nam pokazać.</p>
 
-<h2>7. Zmiany polityki</h2>
-<p>Jeśli Harmo dostanie funkcję, która wysyła dane poza Twoje urządzenia (na przykład przyszłą synchronizację przez konto
-Szugers), opiszemy ją tutaj przed jej wydaniem. Taka funkcja będzie dobrowolna i włączysz ją tylko świadomie.</p>
+<h2>8. Uprawnienia</h2>
+<h3>Aplikacja na telefon</h3>
+<table>
+  <tr><th>Uprawnienie</th><th>Po co</th></tr>
+  <tr><td>Urządzenia w pobliżu (Bluetooth)</td><td>Połączenie z Harmo dla Chrome na Twoim komputerze. Bez lokalizacji: Harmo nie używa Bluetooth do ustalania położenia.</td></tr>
+  <tr><td>Usługa na pierwszym planie</td><td>Utrzymanie połączenia z komputerem, gdy Harmo nie jest otwarta.</td></tr>
+  <tr><td>Powiadomienia</td><td>Stałe powiadomienie, gdy telefon jest połączony z komputerem.</td></tr>
+  <tr><td>Uruchamianie po starcie</td><td>Wznowienie połączenia z komputerem po ponownym uruchomieniu telefonu lub aktualizacji Harmo.</td></tr>
+</table>
+<p>Harmo <b>nie ma</b> uprawnienia dostępu do internetu i nie prosi o dostęp do kontaktów, kalendarza, lokalizacji,
+aparatu, mikrofonu, zdjęć ani plików. Zakup obsługuje aplikacja Sklep Google Play, która ma własny dostęp do sieci.</p>
+<h3>Aplikacja na zegarek</h3>
+<p>Nie prosi o żadne dodatkowe uprawnienia. Dostaje plan z telefonu i pokazuje go w aplikacji, planszach i widżetach.</p>
+<h3>Harmo dla Chrome</h3>
+<p><b>Pamięć lokalna</b> (zapis kluczy parowania) i <b>dokument w tle</b> (utrzymanie połączenia z telefonem, gdy karta
+Harmo jest zamknięta). Rozszerzenie nie ma uprawnień do stron, kart, historii, plików cookie ani pobranych plików.
+Cały kod jest w paczce rozszerzenia, nie pobiera żadnego kodu z sieci.</p>
 
-<p class="foot">Harmo — zadania w czasie. Polityka prywatności, wersja 1.0 z 22 października 2026.
-Adres: <a href="https://szugers.com/harmo/polityka-prywatnosci.html">szugers.com/harmo/polityka-prywatnosci.html</a>.</p>
+<h2>9. Bezpieczeństwo i ochrona danych w fazie projektowania</h2>
+<ul>
+  <li><b>Brak zaplecza serwerowego.</b> Na etapie projektu zrezygnowaliśmy z serwera, konta użytkownika i synchronizacji
+  w chmurze (kopia zapasowa Androida na Twoim koncie Google, opisana w <a href="#pl-kopia">punkcie 5</a>, jest funkcją systemu, nie naszą). Nie istnieje więc centralna baza danych użytkowników, z której mógłby nastąpić wyciek dotyczący wielu osób
+  naraz. Minimalizacja danych wynika z architektury, a nie tylko z deklaracji.</li>
+  <li><b>Izolacja.</b> Baza Harmo leży w prywatnym katalogu aplikacji, do którego inne aplikacje nie mają dostępu dzięki
+  izolacji systemu Android, i jest objęta szyfrowaniem pamięci urządzenia.</li>
+  <li><b>Ochrona domyślna.</b> Kopia zadań w Google jest domyślnie wyłączona (zob. <a href="#pl-kopia">punkt 5</a>), a Harmo nie prosi o żadne uprawnienie
+  na zapas. Kod aplikacji nie zawiera bibliotek reklamowych, analitycznych ani do raportowania awarii.</li>
+  <li><b>Połączenia lokalne.</b> Wymiana danych z zegarkiem idzie kanałem systemowym Wear OS w obrębie Twoich
+  sparowanych urządzeń, a z komputerem przez Bluetooth, po Twoim zatwierdzeniu w oknie Chrome.</li>
+</ul>
+<p>Największym realnym ryzykiem pozostaje utrata lub kradzież odblokowanego urządzenia. Dlatego zalecamy blokadę ekranu
+na telefonie, zegarku i komputerze.</p>
+
+<h2>10. Twoje prawa</h2>
+<p>Twój plan jest na Twoich urządzeniach, więc prawa z art. 15–21 RODO realizujesz sam, bezpośrednio w aplikacji.
+Nie przechowujemy Twojego planu, więc nie mamy czego udostępnić, poprawić ani usunąć po naszej stronie.</p>
+<table>
+  <tr><th>Prawo</th><th>Jak je wykonać w Harmo</th></tr>
+  <tr><td>Dostęp</td><td>Przeglądasz zadania, projekty i notatki w aplikacji.</td></tr>
+  <tr><td>Sprostowanie</td><td>Edytujesz zadanie, projekt lub notatkę.</td></tr>
+  <tr><td>Usunięcie</td><td>Usuwasz wpis, czyścisz dane aplikacji w ustawieniach Androida albo odinstalowujesz Harmo. Kopię w Google usuwasz na swoim koncie Google.</td></tr>
+  <tr><td>Ograniczenie i sprzeciw</td><td>Wyłączasz „Kopia zadań w Google”, rozłączasz komputer albo zegarek, odinstalowujesz aplikację.</td></tr>
+  <tr><td>Przenoszenie</td><td>Przenosisz dane na nowy telefon kablem, bezpośrednio z telefonu na telefon albo przez kopię zapasową Androida.</td></tr>
+</table>
+<p>W zakresie danych, które rzeczywiście przetwarzamy (dane zamówienia i korespondencja, punkty 6 i 7), masz prawo
+dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia oraz sprzeciwu. Napisz do nas:
+<a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>. Masz też prawo wnieść skargę do Prezesa Urzędu Ochrony Danych Osobowych
+(ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl">uodo.gov.pl</a>) lub do organu nadzorczego w kraju,
+w którym mieszkasz.</p>
+<p>Dane, które przechowuje Google (kopia zapasowa, zakupy, konto Google), możesz przejrzeć i usunąć na stronie
+<a href="https://myaccount.google.com">myaccount.google.com</a>.</p>
+
+<h2>11. Przekazywanie danych</h2>
+<p>Nie sprzedajemy, nie udostępniamy i nie przekazujemy nikomu danych z Harmo, w tym poza Europejski Obszar
+Gospodarczy, bo ich nie mamy. Nie korzystamy z reklam, analityki, raportowania awarii ani innych usług firm trzecich,
+które mogłyby otrzymywać dane z aplikacji.</p>
+
+<h2>12. Dzieci</h2>
+<p>Harmo nie jest kierowana do dzieci. Nie zbieramy świadomie danych osób poniżej 16. roku życia.</p>
+
+<h2>13. Zmiany polityki</h2>
+<p>Jeśli dodamy funkcję, która wysyła dane poza Twoje urządzenia (na przykład przyszłą synchronizację przez konto
+Szugers), opiszemy ją w tej polityce przed jej udostępnieniem. Taka funkcja będzie dobrowolna i będzie wymagała
+Twojej wyraźnej zgody. O istotnych zmianach poinformujemy na tej stronie i w opisie aktualizacji w sklepie, z nowym
+numerem wersji i datą. Poprzednie wersje polityki pozostaną dostępne pod tym samym adresem.</p>
+<p>Adres publikacji: szugers.com/harmo/polityka-prywatnosci.html.</p>
+
+<p class="foot">Harmo · Szugers · <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a><br>
+<a href="polityka-prywatnosci-1.0.html#pl">Poprzednia wersja (1.0 z 22 października 2026 r.)</a> nie obejmowała rozszerzenia Harmo dla Chrome ani przełącznika
+„Kopia zadań w Google”.</p>
 </section>
 
 <!-- ============================== EN ============================== -->
 <section id="en" lang="en">
-<h1>Harmo privacy policy</h1>
-<p class="sub">Version 1.0, 22 October 2026. Applies to the Harmo app for Android, the Wear OS app, its tiles and widgets.</p>
+<h1>Harmo Privacy Policy</h1>
+<p class="sub">Version 2.0 of 7 November 2026. Applies to the Harmo app for Android, the Harmo app for Wear OS watches
+(including its tiles and complications) and the Harmo for Chrome extension.</p>
 
 <div class="lead">
-<b>In short.</b> Harmo keeps your plan only on your phone and watch. The developer runs no server that the app could send
-your tasks, projects or notes to. Harmo collects no analytics, shows no ads and uses no tracking tools.
+<b>In short: we do not process your personal data.</b> Harmo has no server, no user account and no internet access.
+Your tasks, projects and notes stay on your own devices: your phone, watch and computer. The devices connect to each
+other directly, without any cloud in between (the Google backup you can turn on is described in <a href="#en-kopia">section 5</a>).
+We collect no statistics, show no ads and use no analytics or tracking tools. That is why we have no access to your
+plan and could not hand it to anyone, even if we wanted to.
 </div>
 
-<h2>1. Developer</h2>
-<p>Developer: Bartosz Pietrzkowski (Szugers), contact: <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
-<p>Harmo is designed so that the developer does not process your personal data: it is not transferred, shared or entrusted
-to the developer, and there is no server it could reach. The developer is therefore not a controller of your data within the
-meaning of the GDPR.</p>
+<h2>1. Who provides Harmo</h2>
+<p>Harmo is provided by Bartosz Pietrzkowski under the Szugers brand (<a href="https://szugers.com">szugers.com</a>).
+Privacy contact: <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
+<p>In this policy, “we” refers to us.</p>
 
-<h2>2. What data the app processes</h2>
+<h2>2. Why we are not the controller of your data in the app</h2>
+<p>We designed Harmo so that the data you enter never reaches us. It is not transferred, shared or entrusted to us,
+and there is no server it could be sent to. The phone and watch apps have no internet permission, and the Chrome
+extension blocks all network connections.</p>
+<p>You store and process the data yourself, on your own devices. For the content of your plan, we are therefore not a
+data controller under the GDPR (Regulation (EU) 2016/679). When you use Harmo to plan your own day, the processing is
+purely personal and, under Article 2(2)(c) GDPR, falls outside the scope of the Regulation. We have not appointed a
+data protection officer, because Article 37 GDPR does not require one. The exceptions where we do process some data are
+described openly in sections 6 and 7.</p>
+
+<h2>3. What Harmo stores on your devices</h2>
 <ul>
-  <li><b>Your plan:</b> tasks, projects, recurring tasks, notes, estimated and actual time, progress. They are stored in a database on your device.</li>
-  <li><b>Settings:</b> appearance, language, bedtime and wake-up time, start view, and the date of first launch (used to count the trial period).</li>
+  <li><b>Your plan:</b> tasks, projects, recurring tasks, templates, notes and sticky notes, planned and actual time,
+  progress. They are stored in a database in your phone's storage that only Harmo can access.</li>
+  <li><b>Settings:</b> theme, language, sleep and wake-up times, start view, widget look, the date of first launch
+  (to count the trial period) and whether Harmo has been purchased.</li>
+  <li><b>On the watch:</b> the latest day plan and List received from the phone.</li>
+  <li><b>In Chrome:</b> the pairing keys for your phone and view settings. The plan itself is kept in Chrome only in
+  memory, while a Harmo tab is open.</li>
 </ul>
-<p>This data is not sent to the developer or to anyone else.</p>
+<p>You can delete this data at any time by uninstalling the app or extension, or by clearing the app's data in Android
+settings.</p>
 
-<h2>3. When data leaves your phone</h2>
-<p>Only in three situations. Each is handled by Google services on your own account, not by the developer:</p>
-<ol>
-  <li><b>Watch.</b> If you use Harmo on a Wear OS watch, the phone sends it your day plan and List only while the watch is
-  near the phone. The data goes directly between your devices over an encrypted Google Play services connection and is not
-  stored in Google's cloud. When the watch is not nearby, nothing is sent and the watch shows the last plan it received.</li>
-  <li><b>Android backup.</b> If Google backup is turned on, Android may save the app's data (including your plan and the
-  date of first launch) to your Google account to restore it on a new phone or after reinstalling. You can turn backup off
-  in Android settings.</li>
-  <li><b>Purchase.</b> Purchases of Harmo are handled by Google Play. The developer does not see your payment details;
-  Google Play only tells the app that it has been purchased.</li>
-</ol>
+<h2>4. How your devices connect to each other</h2>
+<h3>Phone and watch</h3>
+<p>The phone sends the day plan and List to the watch only when the watch is nearby. Messages go directly between your
+devices over the encrypted Google Play services connection for Wear OS and are not stored in Google's cloud (the Google
+backup is described in <a href="#en-kopia">section 5</a>). When the watch is not nearby, nothing is sent. The watch app
+does not create a backup.</p>
+<h3>Phone and computer (Harmo for Chrome)</h3>
+<p>The extension connects to your phone over Bluetooth: via Web Bluetooth for the first pairing and then via a Bluetooth
+serial port (Web Serial). You approve every connection in Chrome's device picker, which lists only devices offering the
+Harmo service. The plan travels directly between your phone and your computer. The extension has no permissions for
+websites, tabs or browsing history, does not read page content, and its security policy blocks all network
+connections. Pairing keys are stored only locally in Chrome (they are not synced with your Google Account; the only
+copy in Google is described in <a href="#en-kopia">section 5</a>).</p>
+<p>While the phone is connected to the computer, Android shows an ongoing Harmo notification. Android requires this for
+services running in the background.</p>
 
-<h2>4. Permissions</h2>
-<p>Harmo has no internet access: neither the phone app nor the watch app has the “full network access” permission. It does
-not ask for access to contacts, location, camera, microphone or files. Purchases are handled by the Google Play Store app.</p>
+<h2 id="en-kopia">5. Backup and moving to a new phone</h2>
+<p>Harmo uses Android's built-in backup. This is a feature of the system and of your Google Account, not ours: the
+backup goes to your Google Account and we have no access to it. What goes into the backup depends on two settings:</p>
+<ul>
+  <li><b>The “Back up tasks to Google” switch</b> in Harmo Settings, under Privacy. <b>It is off by default.</b> While it
+  is off, tasks, notes and sticky notes are not included in the cloud backup. When you turn it on, Android backup saves
+  your whole plan to your Google Account so it can be restored on a new phone or after reinstalling.</li>
+  <li><b>Google backup in Android settings.</b> If it is on, even with the Harmo switch off the backup includes only the
+  app settings: theme, language, widget look, the date of first launch and the purchase status. This way the trial
+  period and the purchase do not start over after reinstalling. You can turn backup off at any time in Android
+  settings.</li>
+</ul>
+<p>When you move to a new phone with a cable or directly from phone to phone, Android transfers your whole plan,
+because the data does not leave your devices in that case.</p>
+<p>The backup in your Google Account is stored and protected by Google under the
+<a href="https://policies.google.com/privacy?hl=en">Google Privacy Policy</a>.</p>
 
-<h2>5. Your rights and deleting data</h2>
-<p>Your data is on your device, so you are in full control of it. You can delete it by uninstalling the app or clearing its
-data in Android settings. The developer stores none of your data, so there is nothing on the developer's side to share,
-correct or delete. For privacy questions, write to <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
+<h2>6. Purchase</h2>
+<p>Harmo runs as the full version for 5 weeks, after which it can be bought on Google Play. Payment is handled entirely
+by Google Play. We do not see your payment details. The app receives only a purchase confirmation from Google Play and
+stores it on your phone.</p>
+<p>As the seller, we receive from Google in the Play Console the order details needed for accounting, such as the order
+number, product, amount and country. We process them only for tax accounting and handling complaints (Article 6(1)(c)
+and (f) GDPR) and keep them for the period required by tax law. Purchases on Google Play are covered by the
+<a href="https://policies.google.com/privacy?hl=en">Google Privacy Policy</a>.</p>
 
-<h2>6. Children</h2>
-<p>Harmo is not directed at children under 13.</p>
+<h2>7. When you write to us</h2>
+<p>If you send us an email, for example with a question or a bug report, we process your email address and the content
+of your message in order to reply (Article 6(1)(f) GDPR: our legitimate interest in handling correspondence). We do
+not use them for marketing. We keep correspondence as long as needed to resolve the matter and then delete it, unless
+the law requires us to keep it. Your rights regarding this data are described in section 10.</p>
+<p>Please do not send us your plan or screenshots with data you do not want us to see.</p>
 
-<h2>7. Changes to this policy</h2>
-<p>If Harmo gains a feature that sends data outside your devices (for example future sync through a Szugers account),
-we will describe it here before it is released. Such a feature will be optional and only turned on by your choice.</p>
+<h2>8. Permissions</h2>
+<h3>Phone app</h3>
+<table>
+  <tr><th>Permission</th><th>Why</th></tr>
+  <tr><td>Nearby devices (Bluetooth)</td><td>Connecting to Harmo for Chrome on your computer. No location: Harmo does not use Bluetooth to determine where you are.</td></tr>
+  <tr><td>Foreground service</td><td>Keeping the connection to the computer while Harmo is not open.</td></tr>
+  <tr><td>Notifications</td><td>The ongoing notification while the phone is connected to the computer.</td></tr>
+  <tr><td>Run at startup</td><td>Resuming the connection to the computer after the phone restarts or Harmo is updated.</td></tr>
+</table>
+<p>Harmo <b>does not have</b> the internet permission and does not ask for access to contacts, calendar, location,
+camera, microphone, photos or files. Purchases are handled by the Google Play Store app, which has its own network
+access.</p>
+<h3>Watch app</h3>
+<p>It asks for no additional permissions. It receives the plan from the phone and shows it in the app, tiles and
+complications.</p>
+<h3>Harmo for Chrome</h3>
+<p><b>Local storage</b> (saving pairing keys) and <b>an offscreen document</b> (keeping the connection to the phone while
+the Harmo tab is closed). The extension has no permissions for websites, tabs, history, cookies or downloads. All of its
+code is packaged in the extension; it does not load any code from the network.</p>
 
-<p class="foot">Harmo — tasks in time. Privacy policy, version 1.0, 22 October 2026.
-Address: <a href="https://szugers.com/harmo/polityka-prywatnosci.html#en">szugers.com/harmo/polityka-prywatnosci.html#en</a>.</p>
+<h2>9. Security and data protection by design</h2>
+<ul>
+  <li><b>No server back end.</b> At the design stage we decided against a server, user accounts and cloud sync (Android
+  backup to your Google Account, described in <a href="#en-kopia">section 5</a>, is a system feature, not ours). There is
+  therefore no central user database from which data on many people could leak at once. Data minimisation follows from
+  the architecture, not merely from a promise.</li>
+  <li><b>Isolation.</b> Harmo's database is in the app's private directory, which other apps cannot access thanks to
+  Android's app sandbox, and it is covered by device storage encryption.</li>
+  <li><b>Protection by default.</b> Backing up tasks to Google is off by default (see <a href="#en-kopia">section 5</a>),
+  and Harmo does not request any permission just in case. The app contains no advertising, analytics or crash reporting
+  libraries.</li>
+  <li><b>Local connections.</b> Data is exchanged with the watch over the Wear OS system channel within your paired
+  devices, and with the computer over Bluetooth after you approve it in Chrome.</li>
+</ul>
+<p>The biggest real risk remains the loss or theft of an unlocked device. We therefore recommend a screen lock on your
+phone, watch and computer.</p>
+
+<h2>10. Your rights</h2>
+<p>Your plan is on your devices, so you exercise your rights under Articles 15–21 GDPR yourself, directly in the app.
+We do not store your plan, so there is nothing on our side to provide, correct or delete.</p>
+<table>
+  <tr><th>Right</th><th>How to exercise it in Harmo</th></tr>
+  <tr><td>Access</td><td>View your tasks, projects and notes in the app.</td></tr>
+  <tr><td>Rectification</td><td>Edit a task, project or note.</td></tr>
+  <tr><td>Erasure</td><td>Delete an entry, clear the app's data in Android settings or uninstall Harmo. Delete the Google backup in your Google Account.</td></tr>
+  <tr><td>Restriction and objection</td><td>Turn off “Back up tasks to Google”, disconnect the computer or watch, uninstall the app.</td></tr>
+  <tr><td>Portability</td><td>Move your data to a new phone with a cable, directly from phone to phone or via Android backup.</td></tr>
+</table>
+<p>For the data we actually process (order details and correspondence, sections 6 and 7), you have the right of access,
+rectification, erasure, restriction of processing, portability and objection. Write to us at
+<a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>. You also have the right to lodge a complaint with
+the Polish supervisory authority, the President of the Personal Data Protection Office (ul. Stawki 2, 00-193 Warsaw,
+<a href="https://uodo.gov.pl/en">uodo.gov.pl</a>), or with the supervisory authority in your country of residence.</p>
+<p>You can review and delete data held by Google (backup, purchases, Google Account) at
+<a href="https://myaccount.google.com">myaccount.google.com</a>.</p>
+
+<h2>11. Data transfers</h2>
+<p>We do not sell, share or transfer data from Harmo to anyone, including outside the European Economic Area, because we
+do not have it. We use no advertising, analytics, crash reporting or other third-party services that could receive data
+from the app.</p>
+
+<h2>12. Children</h2>
+<p>Harmo is not directed at children. We do not knowingly collect data from anyone under 16.</p>
+
+<h2>13. Changes to this policy</h2>
+<p>If we add a feature that sends data outside your devices (for example, a future sync via a Szugers account), we will
+describe it in this policy before it becomes available. Such a feature will be optional and will require your explicit
+consent. We will announce material changes on this page and in the store update notes, with a new version number and
+date. Previous versions of this policy will remain available at the same address.</p>
+<p>Published at: szugers.com/harmo/polityka-prywatnosci.html.</p>
+
+<p class="foot">Harmo · Szugers · <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a><br>
+<a href="polityka-prywatnosci-1.0.html#en">The previous version (1.0 of 22 October 2026)</a> did not cover the Harmo for Chrome extension or the “Back up tasks to
+Google” switch.</p>
 </section>
 
 <!-- ============================== PT ============================== -->
 <section id="pt" lang="pt">
 <h1>Política de privacidade do Harmo</h1>
-<p class="sub">Versão 1.0 de 22 de outubro de 2026. Aplica-se à aplicação Harmo para Android, à aplicação para Wear OS, aos seus blocos e widgets.</p>
+<p class="sub">Versão 2.0 de 7 de novembro de 2026. Aplica-se à aplicação Harmo para Android, à aplicação Harmo para
+relógios Wear OS (incluindo blocos e complicações) e à extensão Harmo para Chrome.</p>
 
 <div class="lead">
-<b>Em resumo.</b> O Harmo guarda o teu plano apenas no teu telemóvel e no teu relógio. O programador não tem nenhum
-servidor para onde a aplicação possa enviar tarefas, projetos ou notas. O Harmo não recolhe estatísticas, não mostra
-anúncios e não usa ferramentas de rastreio.
+<b>Em resumo: não tratamos os seus dados pessoais.</b> O Harmo não tem servidor, conta de utilizador nem acesso à
+internet. As suas tarefas, projetos e notas ficam nos seus próprios dispositivos: telemóvel, relógio e computador. Os
+dispositivos ligam-se diretamente entre si, sem nuvem pelo meio (a cópia de segurança na Google que pode ativar está
+descrita no <a href="#pt-kopia">ponto 5</a>). Não recolhemos estatísticas, não mostramos anúncios e não usamos
+ferramentas de análise nem de rastreio. Por isso não temos acesso ao seu plano e não o poderíamos passar a ninguém,
+mesmo que quiséssemos.
 </div>
 
-<h2>1. Programador</h2>
-<p>Programador: Bartosz Pietrzkowski (Szugers), contacto: <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
-<p>O Harmo foi concebido para que o programador não trate os teus dados pessoais: não lhe são transmitidos, partilhados
-nem confiados, e não existe nenhum servidor onde possam chegar. Por isso, o programador não é responsável pelo tratamento
-dos teus dados na aceção do RGPD.</p>
+<h2>1. Quem disponibiliza o Harmo</h2>
+<p>O Harmo é disponibilizado por Bartosz Pietrzkowski, sob a marca Szugers (<a href="https://szugers.com">szugers.com</a>).
+Contacto para questões de privacidade: <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
+<p>Nesta política, “nós” refere-se a nós.</p>
 
-<h2>2. Que dados a aplicação trata</h2>
+<h2>2. Porque não somos responsáveis pelo tratamento dos seus dados na aplicação</h2>
+<p>Concebemos o Harmo para que os dados que nele introduz nunca cheguem até nós. Não nos são transmitidos, partilhados
+nem confiados, e não existe nenhum servidor para onde possam ir. As aplicações para telemóvel e relógio não têm
+permissão de acesso à internet, e a extensão para Chrome bloqueia todas as ligações de rede.</p>
+<p>É o próprio utilizador que guarda e trata os dados, nos seus dispositivos. Por isso, quanto ao conteúdo do seu plano,
+não somos responsáveis pelo tratamento na aceção do RGPD (Regulamento (UE) 2016/679). Quando usa o Harmo para planear o
+seu próprio dia, o tratamento tem natureza exclusivamente pessoal e, nos termos do artigo 2.º, n.º 2, alínea c), do
+RGPD, fica fora do âmbito do Regulamento. Não designámos um encarregado da proteção de dados, porque o artigo 37.º do
+RGPD não o exige. As exceções em que de facto tratamos alguns dados estão descritas com franqueza nos pontos 6 e 7.</p>
+
+<h2>3. O que o Harmo guarda nos seus dispositivos</h2>
 <ul>
-  <li><b>O teu plano:</b> tarefas, projetos, tarefas recorrentes, notas, tempo estimado e real, progresso. Ficam guardados numa base de dados no teu dispositivo.</li>
-  <li><b>Definições:</b> aspeto, idioma, hora de dormir e de acordar, vista inicial e a data da primeira utilização (para contar o período experimental).</li>
+  <li><b>O seu plano:</b> tarefas, projetos, tarefas recorrentes, modelos, notas e lembretes, tempo planeado e real,
+  progresso. São guardados numa base de dados na memória do telemóvel, acessível apenas ao Harmo.</li>
+  <li><b>Definições:</b> aspeto, idioma, horas de dormir e de acordar, vista inicial, aspeto dos widgets, data da primeira
+  utilização (para contar o período de avaliação) e se o Harmo foi comprado.</li>
+  <li><b>No relógio:</b> o último plano do dia e a Lista recebidos do telemóvel.</li>
+  <li><b>No Chrome:</b> as chaves de emparelhamento com o seu telemóvel e as definições de visualização. O plano em si
+  fica no Chrome apenas em memória, enquanto o separador do Harmo estiver aberto.</li>
 </ul>
-<p>Estes dados não são enviados ao programador nem a mais ninguém.</p>
+<p>Pode apagar estes dados a qualquer momento: desinstalando a aplicação ou a extensão, ou limpando os dados da aplicação
+nas definições do Android.</p>
 
-<h2>3. Quando os dados saem do telemóvel</h2>
-<p>Apenas em três situações. Todas são tratadas pelos serviços Google na tua própria conta, e não pelo programador:</p>
-<ol>
-  <li><b>Relógio.</b> Se usas o Harmo num relógio Wear OS, o telemóvel envia-lhe o plano do dia e a Lista apenas quando o
-  relógio está perto do telemóvel. Os dados passam diretamente entre os teus dispositivos, por uma ligação encriptada dos
-  Serviços do Google Play, e não ficam guardados na nuvem da Google. Quando o relógio não está por perto, nada é enviado e
-  o relógio mostra o último plano que recebeu.</li>
-  <li><b>Cópia de segurança do Android.</b> Se a cópia de segurança da Google estiver ativa, o Android pode guardar os dados
-  da aplicação (incluindo o plano e a data da primeira utilização) na tua conta Google, para os restaurar num novo telemóvel
-  ou depois de reinstalares. Podes desativar a cópia nas definições do Android.</li>
-  <li><b>Compra.</b> A compra do Harmo é tratada pelo Google Play. O programador não vê os teus dados de pagamento; o Google
-  Play apenas informa a aplicação de que foi comprada.</li>
-</ol>
+<h2>4. Como os seus dispositivos se ligam entre si</h2>
+<h3>Telemóvel e relógio</h3>
+<p>O telemóvel envia o plano do dia e a Lista ao relógio apenas quando o relógio está por perto. As mensagens seguem
+diretamente entre os seus dispositivos, pela ligação encriptada dos serviços Google Play para Wear OS, e não são
+guardadas na nuvem da Google (a cópia de segurança na Google está descrita no <a href="#pt-kopia">ponto 5</a>). Quando
+o relógio não está por perto, nada é enviado. A aplicação do relógio não cria cópias de segurança.</p>
+<h3>Telemóvel e computador (Harmo para Chrome)</h3>
+<p>A extensão liga-se ao seu telemóvel por Bluetooth: no primeiro emparelhamento através de Web Bluetooth e depois
+através de uma porta série Bluetooth (Web Serial). Aprova cada ligação na janela de seleção do Chrome, que mostra apenas
+dispositivos com o serviço Harmo. O plano circula diretamente entre o telemóvel e o computador. A extensão não tem
+permissões para sites, separadores nem histórico de navegação, não lê o conteúdo das páginas e a sua política de
+segurança bloqueia todas as ligações de rede. As chaves de emparelhamento ficam guardadas apenas localmente no Chrome
+(não são sincronizadas com a Conta Google; a única cópia na Google está descrita no <a href="#pt-kopia">ponto 5</a>).</p>
+<p>Enquanto o telemóvel está ligado ao computador, o Android mostra uma notificação permanente do Harmo. É um requisito
+do sistema para serviços que funcionam em segundo plano.</p>
 
-<h2>4. Permissões</h2>
-<p>O Harmo não tem acesso à internet: nem a aplicação do telemóvel nem a do relógio têm a permissão “acesso total à rede”.
-Também não pede acesso a contactos, localização, câmara, microfone ou ficheiros. A compra é tratada pela aplicação Google Play Store.</p>
+<h2 id="pt-kopia">5. Cópia de segurança e mudança para um novo telemóvel</h2>
+<p>O Harmo usa a cópia de segurança integrada do Android. É uma funcionalidade do sistema e da sua Conta Google, não
+nossa: a cópia vai para a sua Conta Google e nós não temos acesso a ela. O que entra na cópia depende de duas
+definições:</p>
+<ul>
+  <li><b>O interruptor “Cópia das tarefas na Google”</b> nas Definições do Harmo, na secção Privacidade. <b>Está
+  desativado por predefinição.</b> Enquanto está desativado, tarefas, notas e lembretes não entram na cópia na nuvem.
+  Quando o ativa, a cópia de segurança do Android guarda todo o seu plano na Conta Google, para o restaurar num novo
+  telemóvel ou após reinstalar.</li>
+  <li><b>Cópia de segurança da Google nas definições do Android.</b> Se estiver ativada, mesmo com o interruptor do Harmo
+  desativado entram na cópia apenas as definições da aplicação: aspeto, idioma, aspeto dos widgets, data da primeira
+  utilização e informação de compra. Assim, após reinstalar, o período de avaliação e a compra não recomeçam do zero.
+  Pode desativar a cópia a qualquer momento nas definições do Android.</li>
+</ul>
+<p>Quando transfere os dados para um novo telemóvel por cabo ou diretamente de telemóvel para telemóvel, o Android
+transfere todo o plano, porque nesse caso os dados não saem dos seus dispositivos.</p>
+<p>A cópia de segurança na Conta Google é guardada e protegida pela Google, nos termos da
+<a href="https://policies.google.com/privacy?hl=pt-PT">Política de Privacidade da Google</a>.</p>
 
-<h2>5. Os teus direitos e eliminação de dados</h2>
-<p>Os teus dados estão no teu dispositivo, por isso tens controlo total sobre eles. Podes eliminá-los desinstalando a
-aplicação ou limpando os seus dados nas definições do Android. O programador não guarda os teus dados, por isso do lado
-dele não há nada para disponibilizar, corrigir ou eliminar. Para questões de privacidade, escreve para
-<a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
+<h2>6. Compra</h2>
+<p>O Harmo funciona na versão completa durante 5 semanas e depois pode ser comprado no Google Play. O pagamento é
+tratado inteiramente pelo Google Play. Não vemos os seus dados de pagamento. A aplicação recebe do Google Play apenas a
+confirmação da compra e guarda-a no seu telemóvel.</p>
+<p>Como vendedor, recebemos da Google, na Play Console, os dados da encomenda necessários para a contabilidade, por
+exemplo número da encomenda, produto, valor e país. Tratamo-los apenas para fins fiscais e de tratamento de reclamações
+(artigo 6.º, n.º 1, alíneas c) e f), do RGPD) e conservamo-los pelo prazo exigido pela legislação fiscal. As compras no
+Google Play são regidas pela <a href="https://policies.google.com/privacy?hl=pt-PT">Política de Privacidade da Google</a>.</p>
 
-<h2>6. Crianças</h2>
-<p>O Harmo não se destina a crianças com menos de 13 anos.</p>
+<h2>7. Quando nos escreve</h2>
+<p>Se nos enviar um e-mail, por exemplo com uma pergunta ou a comunicação de um erro, tratamos o seu endereço de e-mail e
+o conteúdo da mensagem para lhe responder (artigo 6.º, n.º 1, alínea f), do RGPD: o nosso interesse legítimo em manter a
+correspondência). Não os usamos para marketing. Conservamos a correspondência enquanto for necessária para resolver o
+assunto e depois apagamo-la, salvo se a lei exigir a sua conservação. Os seus direitos quanto a estes dados estão
+descritos no ponto 10.</p>
+<p>Não nos envie o seu plano nem capturas de ecrã com dados que não queira que vejamos.</p>
 
-<h2>7. Alterações a esta política</h2>
-<p>Se o Harmo ganhar uma funcionalidade que envie dados para fora dos teus dispositivos (por exemplo, uma futura
-sincronização através de uma conta Szugers), descrevê-la-emos aqui antes do lançamento. Essa funcionalidade será opcional
-e só será ativada por tua escolha.</p>
+<h2>8. Permissões</h2>
+<h3>Aplicação para telemóvel</h3>
+<table>
+  <tr><th>Permissão</th><th>Para quê</th></tr>
+  <tr><td>Dispositivos próximos (Bluetooth)</td><td>Ligação ao Harmo para Chrome no seu computador. Sem localização: o Harmo não usa o Bluetooth para determinar onde está.</td></tr>
+  <tr><td>Serviço em primeiro plano</td><td>Manter a ligação ao computador quando o Harmo não está aberto.</td></tr>
+  <tr><td>Notificações</td><td>A notificação permanente enquanto o telemóvel está ligado ao computador.</td></tr>
+  <tr><td>Executar no arranque</td><td>Retomar a ligação ao computador depois de reiniciar o telemóvel ou de atualizar o Harmo.</td></tr>
+</table>
+<p>O Harmo <b>não tem</b> permissão de acesso à internet e não pede acesso a contactos, calendário, localização, câmara,
+microfone, fotografias nem ficheiros. As compras são tratadas pela aplicação Google Play Store, que tem o seu próprio
+acesso à rede.</p>
+<h3>Aplicação para relógio</h3>
+<p>Não pede permissões adicionais. Recebe o plano do telemóvel e mostra-o na aplicação, nos blocos e nas complicações.</p>
+<h3>Harmo para Chrome</h3>
+<p><b>Armazenamento local</b> (guardar as chaves de emparelhamento) e <b>documento fora do ecrã</b> (manter a ligação ao
+telemóvel quando o separador do Harmo está fechado). A extensão não tem permissões para sites, separadores, histórico,
+cookies nem transferências. Todo o código está incluído na extensão; não carrega código da rede.</p>
 
-<p class="foot">Harmo — tarefas no tempo. Política de privacidade, versão 1.0 de 22 de outubro de 2026.
-Endereço: <a href="https://szugers.com/harmo/polityka-prywatnosci.html#pt">szugers.com/harmo/polityka-prywatnosci.html#pt</a>.</p>
+<h2>9. Segurança e proteção de dados desde a conceção</h2>
+<ul>
+  <li><b>Sem servidor.</b> Na fase de conceção decidimos não ter servidor, contas de utilizador nem sincronização na nuvem
+  (a cópia de segurança do Android na sua Conta Google, descrita no <a href="#pt-kopia">ponto 5</a>, é uma funcionalidade
+  do sistema, não nossa). Não existe, portanto, uma base de dados central de utilizadores de onde possam fugir dados de
+  muitas pessoas ao mesmo tempo. A minimização de dados resulta da arquitetura, não apenas de uma promessa.</li>
+  <li><b>Isolamento.</b> A base de dados do Harmo está na pasta privada da aplicação, à qual outras aplicações não têm
+  acesso graças ao isolamento do Android, e está abrangida pela encriptação do armazenamento do dispositivo.</li>
+  <li><b>Proteção por predefinição.</b> A cópia das tarefas na Google está desativada por predefinição (ver
+  <a href="#pt-kopia">ponto 5</a>), e o Harmo não pede nenhuma permissão “para o caso de”. A aplicação não contém
+  bibliotecas de publicidade, de análise nem de relatórios de falhas.</li>
+  <li><b>Ligações locais.</b> A troca de dados com o relógio passa pelo canal do sistema Wear OS entre os seus
+  dispositivos emparelhados, e com o computador por Bluetooth, depois de a aprovar no Chrome.</li>
+</ul>
+<p>O maior risco real continua a ser a perda ou o roubo de um dispositivo desbloqueado. Por isso recomendamos o bloqueio
+de ecrã no telemóvel, no relógio e no computador.</p>
+
+<h2>10. Os seus direitos</h2>
+<p>O seu plano está nos seus dispositivos, por isso exerce os direitos previstos nos artigos 15.º a 21.º do RGPD por si
+próprio, diretamente na aplicação. Não guardamos o seu plano, pelo que do nosso lado não há nada a facultar, retificar
+ou apagar.</p>
+<table>
+  <tr><th>Direito</th><th>Como o exercer no Harmo</th></tr>
+  <tr><td>Acesso</td><td>Consulte as tarefas, projetos e notas na aplicação.</td></tr>
+  <tr><td>Retificação</td><td>Edite uma tarefa, projeto ou nota.</td></tr>
+  <tr><td>Apagamento</td><td>Apague uma entrada, limpe os dados da aplicação nas definições do Android ou desinstale o Harmo. A cópia na Google apaga-se na sua Conta Google.</td></tr>
+  <tr><td>Limitação e oposição</td><td>Desative “Cópia das tarefas na Google”, desligue o computador ou o relógio, desinstale a aplicação.</td></tr>
+  <tr><td>Portabilidade</td><td>Transfira os dados para um novo telemóvel por cabo, diretamente de telemóvel para telemóvel ou através da cópia de segurança do Android.</td></tr>
+</table>
+<p>Quanto aos dados que de facto tratamos (dados da encomenda e correspondência, pontos 6 e 7), tem direito de acesso,
+retificação, apagamento, limitação do tratamento, portabilidade e oposição. Escreva-nos para
+<a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>. Tem também o direito de apresentar reclamação à
+autoridade de controlo polaca, o Presidente do Gabinete de Proteção de Dados Pessoais (ul. Stawki 2, 00-193 Varsóvia,
+<a href="https://uodo.gov.pl/en">uodo.gov.pl</a>), ou à autoridade de controlo do seu país de residência.</p>
+<p>Pode consultar e apagar os dados guardados pela Google (cópia de segurança, compras, Conta Google) em
+<a href="https://myaccount.google.com">myaccount.google.com</a>.</p>
+
+<h2>11. Transferência de dados</h2>
+<p>Não vendemos, partilhamos nem transferimos dados do Harmo para ninguém, incluindo para fora do Espaço Económico
+Europeu, porque não os temos. Não usamos publicidade, análise, relatórios de falhas nem outros serviços de terceiros que
+possam receber dados da aplicação.</p>
+
+<h2>12. Crianças</h2>
+<p>O Harmo não se destina a crianças. Não recolhemos conscientemente dados de menores de 16 anos.</p>
+
+<h2>13. Alterações a esta política</h2>
+<p>Se acrescentarmos uma funcionalidade que envie dados para fora dos seus dispositivos (por exemplo, uma futura
+sincronização através de uma conta Szugers), descrevê-la-emos nesta política antes de a disponibilizar. Essa
+funcionalidade será opcional e exigirá o seu consentimento expresso. Anunciaremos alterações relevantes nesta página e
+nas notas de atualização da loja, com novo número de versão e data. As versões anteriores desta política continuarão
+disponíveis no mesmo endereço.</p>
+<p>Publicada em: szugers.com/harmo/polityka-prywatnosci.html.</p>
+
+<p class="foot">Harmo · Szugers · <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a><br>
+<a href="polityka-prywatnosci-1.0.html#pt">A versão anterior (1.0 de 22 de outubro de 2026)</a> não abrangia a extensão Harmo para Chrome nem o interruptor
+“Cópia das tarefas na Google”.</p>
 </section>
 
 <!-- ============================== ES ============================== -->
 <section id="es" lang="es">
 <h1>Política de privacidad de Harmo</h1>
-<p class="sub">Versión 1.0 del 22 de octubre de 2026. Se aplica a la aplicación Harmo para Android, a la aplicación para Wear OS, sus tarjetas y widgets.</p>
+<p class="sub">Versión 2.0 del 7 de noviembre de 2026. Se aplica a la app Harmo para Android, a la app Harmo para relojes
+Wear OS (incluidas sus tarjetas y complicaciones) y a la extensión Harmo para Chrome.</p>
 
 <div class="lead">
-<b>En resumen.</b> Harmo guarda tu plan solo en tu teléfono y tu reloj. El desarrollador no tiene ningún servidor al que
-la aplicación pueda enviar tus tareas, proyectos o notas. Harmo no recoge estadísticas, no muestra anuncios y no usa
-herramientas de seguimiento.
+<b>En resumen: no tratamos tus datos personales.</b> Harmo no tiene servidor, cuenta de usuario ni acceso a internet.
+Tus tareas, proyectos y notas se quedan en tus propios dispositivos: teléfono, reloj y ordenador. Los dispositivos se
+conectan entre sí directamente, sin ninguna nube de por medio (la copia de seguridad en Google que puedes activar se
+describe en el <a href="#es-kopia">apartado 5</a>). No recogemos estadísticas, no mostramos anuncios y no usamos
+herramientas de análisis ni de seguimiento. Por eso no tenemos acceso a tu plan y no podríamos dárselo a nadie, aunque
+quisiéramos.
 </div>
 
-<h2>1. Desarrollador</h2>
-<p>Desarrollador: Bartosz Pietrzkowski (Szugers), contacto: <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
-<p>Harmo está diseñada para que el desarrollador no trate tus datos personales: no se le transmiten, comparten ni
-encomiendan, y no existe ningún servidor al que puedan llegar. Por eso el desarrollador no es responsable del tratamiento
-de tus datos en el sentido del RGPD.</p>
+<h2>1. Quién ofrece Harmo</h2>
+<p>Harmo lo ofrece Bartosz Pietrzkowski, bajo la marca Szugers (<a href="https://szugers.com">szugers.com</a>).
+Contacto para asuntos de privacidad: <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
+<p>En esta política, “nosotros” se refiere a nosotros.</p>
 
-<h2>2. Qué datos trata la aplicación</h2>
+<h2>2. Por qué no somos responsables del tratamiento de tus datos en la app</h2>
+<p>Diseñamos Harmo para que los datos que introduces nunca lleguen a nosotros. No se nos transmiten, comparten ni
+encargan, y no existe ningún servidor al que puedan ir. Las apps para teléfono y reloj no tienen permiso de acceso a
+internet, y la extensión para Chrome bloquea todas las conexiones de red.</p>
+<p>Eres tú quien guarda y trata los datos, en tus propios dispositivos. Por eso, respecto al contenido de tu plan, no
+somos responsables del tratamiento en el sentido del RGPD (Reglamento (UE) 2016/679). Cuando usas Harmo para planificar
+tu propio día, el tratamiento es exclusivamente personal y, según el artículo 2, apartado 2, letra c), del RGPD, queda
+fuera del ámbito del Reglamento. No hemos designado un delegado de protección de datos, porque el artículo 37 del RGPD no
+lo exige. Las excepciones en las que sí tratamos algunos datos se describen con franqueza en los apartados 6 y 7.</p>
+
+<h2>3. Qué guarda Harmo en tus dispositivos</h2>
 <ul>
-  <li><b>Tu plan:</b> tareas, proyectos, tareas periódicas, notas, tiempo estimado y real, progreso. Se guardan en una base de datos en tu dispositivo.</li>
-  <li><b>Ajustes:</b> apariencia, idioma, hora de dormir y de despertar, vista inicial y la fecha del primer uso (para contar el periodo de prueba).</li>
+  <li><b>Tu plan:</b> tareas, proyectos, tareas periódicas, plantillas, notas y notas adhesivas, tiempo previsto y real,
+  progreso. Se guardan en una base de datos en la memoria del teléfono, a la que solo accede Harmo.</li>
+  <li><b>Ajustes:</b> aspecto, idioma, horas de dormir y despertar, vista inicial, aspecto de los widgets, fecha del
+  primer inicio (para contar el periodo de prueba) y si Harmo se ha comprado.</li>
+  <li><b>En el reloj:</b> el último plan del día y la Lista recibidos del teléfono.</li>
+  <li><b>En Chrome:</b> las claves de emparejamiento con tu teléfono y los ajustes de vista. El plan en sí está en Chrome
+  solo en memoria, mientras la pestaña de Harmo está abierta.</li>
 </ul>
-<p>Estos datos no se envían al desarrollador ni a nadie más.</p>
+<p>Puedes borrar estos datos en cualquier momento: desinstalando la app o la extensión, o borrando los datos de la app en
+los ajustes de Android.</p>
 
-<h2>3. Cuándo salen los datos del teléfono</h2>
-<p>Solo en tres situaciones. Todas las gestionan los servicios de Google en tu propia cuenta, no el desarrollador:</p>
-<ol>
-  <li><b>Reloj.</b> Si usas Harmo en un reloj Wear OS, el teléfono le envía el plan del día y la Lista solo cuando el reloj
-  está cerca del teléfono. Los datos van directamente entre tus dispositivos, por una conexión cifrada de los Servicios de
-  Google Play, y no se guardan en la nube de Google. Cuando el reloj no está cerca, no se envía nada y el reloj muestra el
-  último plan que recibió.</li>
-  <li><b>Copia de seguridad de Android.</b> Si tienes activada la copia de seguridad de Google, Android puede guardar los datos
-  de la aplicación (incluido el plan y la fecha del primer uso) en tu cuenta de Google para restaurarlos en un teléfono nuevo
-  o tras reinstalar. Puedes desactivar la copia en los ajustes de Android.</li>
-  <li><b>Compra.</b> La compra de Harmo la gestiona Google Play. El desarrollador no ve tus datos de pago; Google Play solo
-  comunica a la aplicación que ha sido comprada.</li>
-</ol>
+<h2>4. Cómo se conectan tus dispositivos entre sí</h2>
+<h3>Teléfono y reloj</h3>
+<p>El teléfono envía el plan del día y la Lista al reloj solo cuando el reloj está cerca. Los mensajes van directamente
+entre tus dispositivos, por la conexión cifrada de los servicios de Google Play para Wear OS, y no se guardan en la nube
+de Google (la copia de seguridad en Google se describe en el <a href="#es-kopia">apartado 5</a>). Cuando el reloj no
+está cerca, no se envía nada. La app del reloj no crea copias de seguridad.</p>
+<h3>Teléfono y ordenador (Harmo para Chrome)</h3>
+<p>La extensión se conecta a tu teléfono por Bluetooth: en el primer emparejamiento mediante Web Bluetooth y después
+mediante un puerto serie Bluetooth (Web Serial). Apruebas cada conexión en la ventana de selección de Chrome, que solo
+muestra dispositivos con el servicio Harmo. El plan viaja directamente entre el teléfono y el ordenador. La extensión no
+tiene permisos para sitios web, pestañas ni historial de navegación, no lee el contenido de las páginas y su política de
+seguridad bloquea todas las conexiones de red. Las claves de emparejamiento se guardan solo localmente en Chrome (no se
+sincronizan con tu cuenta de Google; la única copia en Google se describe en el <a href="#es-kopia">apartado 5</a>).</p>
+<p>Mientras el teléfono está conectado al ordenador, Android muestra una notificación permanente de Harmo. Es un requisito
+del sistema para los servicios que funcionan en segundo plano.</p>
 
-<h2>4. Permisos</h2>
-<p>Harmo no tiene acceso a internet: ni la aplicación del teléfono ni la del reloj tienen el permiso “acceso completo a la red”.
-Tampoco pide acceso a contactos, ubicación, cámara, micrófono ni archivos. La compra la gestiona la aplicación Google Play Store.</p>
+<h2 id="es-kopia">5. Copia de seguridad y cambio a un teléfono nuevo</h2>
+<p>Harmo usa la copia de seguridad integrada de Android. Es una función del sistema y de tu cuenta de Google, no nuestra:
+la copia va a tu cuenta de Google y nosotros no tenemos acceso a ella. Lo que entra en la copia depende de dos
+ajustes:</p>
+<ul>
+  <li><b>El interruptor “Copia de las tareas en Google”</b> en los Ajustes de Harmo, en la sección Privacidad.
+  <b>Está desactivado por defecto.</b> Mientras está desactivado, las tareas, notas y notas adhesivas no entran en la
+  copia en la nube. Si lo activas, la copia de seguridad de Android guarda todo tu plan en tu cuenta de Google para
+  restaurarlo en un teléfono nuevo o tras reinstalar.</li>
+  <li><b>Copia de seguridad de Google en los ajustes de Android.</b> Si está activada, incluso con el interruptor de Harmo
+  desactivado entran en la copia solo los ajustes de la app: aspecto, idioma, aspecto de los widgets, fecha del primer
+  inicio e información de compra. Así, tras reinstalar, el periodo de prueba y la compra no empiezan de cero. Puedes
+  desactivar la copia en cualquier momento en los ajustes de Android.</li>
+</ul>
+<p>Cuando pasas los datos a un teléfono nuevo con un cable o directamente de teléfono a teléfono, Android transfiere todo
+el plan, porque en ese caso los datos no salen de tus dispositivos.</p>
+<p>Google guarda y protege la copia de seguridad de tu cuenta de Google conforme a la
+<a href="https://policies.google.com/privacy?hl=es">Política de Privacidad de Google</a>.</p>
 
-<h2>5. Tus derechos y eliminación de datos</h2>
-<p>Tus datos están en tu dispositivo, así que tienes control total sobre ellos. Puedes eliminarlos desinstalando la
-aplicación o borrando sus datos en los ajustes de Android. El desarrollador no guarda tus datos, así que por su parte no
-hay nada que facilitar, corregir ni eliminar. Para cuestiones de privacidad, escribe a
-<a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>.</p>
+<h2>6. Compra</h2>
+<p>Harmo funciona como versión completa durante 5 semanas y después se puede comprar en Google Play. El pago lo gestiona
+íntegramente Google Play. No vemos tus datos de pago. La app recibe de Google Play solo la confirmación de la compra y la
+guarda en tu teléfono.</p>
+<p>Como vendedores, recibimos de Google en Play Console los datos del pedido necesarios para la contabilidad, por ejemplo
+número de pedido, producto, importe y país. Los tratamos solo con fines fiscales y de gestión de reclamaciones
+(artículo 6, apartado 1, letras c) y f), del RGPD) y los conservamos durante el plazo que exige la legislación fiscal.
+Las compras en Google Play se rigen por la <a href="https://policies.google.com/privacy?hl=es">Política de Privacidad de Google</a>.</p>
 
-<h2>6. Menores</h2>
-<p>Harmo no está dirigida a menores de 13 años.</p>
+<h2>7. Cuando nos escribes</h2>
+<p>Si nos envías un correo, por ejemplo con una pregunta o para informar de un error, tratamos tu dirección de correo y el
+contenido del mensaje para responderte (artículo 6, apartado 1, letra f), del RGPD: nuestro interés legítimo en atender
+la correspondencia). No los usamos para marketing. Conservamos la correspondencia el tiempo necesario para resolver el
+asunto y después la borramos, salvo que la ley obligue a conservarla. Tus derechos sobre estos datos se describen en el
+apartado 10.</p>
+<p>No nos envíes tu plan ni capturas de pantalla con datos que no quieras que veamos.</p>
 
-<h2>7. Cambios en esta política</h2>
-<p>Si Harmo incorpora una función que envíe datos fuera de tus dispositivos (por ejemplo, una futura sincronización con una
-cuenta Szugers), la describiremos aquí antes de lanzarla. Esa función será opcional y solo se activará si tú lo eliges.</p>
+<h2>8. Permisos</h2>
+<h3>App para teléfono</h3>
+<table>
+  <tr><th>Permiso</th><th>Para qué</th></tr>
+  <tr><td>Dispositivos cercanos (Bluetooth)</td><td>Conexión con Harmo para Chrome en tu ordenador. Sin ubicación: Harmo no usa el Bluetooth para saber dónde estás.</td></tr>
+  <tr><td>Servicio en primer plano</td><td>Mantener la conexión con el ordenador cuando Harmo no está abierta.</td></tr>
+  <tr><td>Notificaciones</td><td>La notificación permanente mientras el teléfono está conectado al ordenador.</td></tr>
+  <tr><td>Ejecutar al iniciar</td><td>Reanudar la conexión con el ordenador tras reiniciar el teléfono o actualizar Harmo.</td></tr>
+</table>
+<p>Harmo <b>no tiene</b> permiso de acceso a internet y no pide acceso a contactos, calendario, ubicación, cámara,
+micrófono, fotos ni archivos. Las compras las gestiona la app Google Play Store, que tiene su propio acceso a la red.</p>
+<h3>App para reloj</h3>
+<p>No pide permisos adicionales. Recibe el plan del teléfono y lo muestra en la app, las tarjetas y las complicaciones.</p>
+<h3>Harmo para Chrome</h3>
+<p><b>Almacenamiento local</b> (guardar las claves de emparejamiento) y <b>documento fuera de pantalla</b> (mantener la
+conexión con el teléfono cuando la pestaña de Harmo está cerrada). La extensión no tiene permisos para sitios web,
+pestañas, historial, cookies ni descargas. Todo el código está incluido en la extensión; no carga código de la red.</p>
 
-<p class="foot">Harmo — tareas en el tiempo. Política de privacidad, versión 1.0 del 22 de octubre de 2026.
-Dirección: <a href="https://szugers.com/harmo/polityka-prywatnosci.html#es">szugers.com/harmo/polityka-prywatnosci.html#es</a>.</p>
+<h2>9. Seguridad y protección de datos desde el diseño</h2>
+<ul>
+  <li><b>Sin servidor.</b> En la fase de diseño decidimos prescindir de servidor, cuentas de usuario y sincronización en
+  la nube (la copia de seguridad de Android en tu cuenta de Google, descrita en el <a href="#es-kopia">apartado 5</a>, es
+  una función del sistema, no nuestra). Por tanto, no existe una base de datos central de usuarios de la que puedan
+  filtrarse datos de muchas personas a la vez. La minimización de datos se deriva de la arquitectura, no solo de una
+  promesa.</li>
+  <li><b>Aislamiento.</b> La base de datos de Harmo está en la carpeta privada de la app, a la que otras apps no tienen
+  acceso gracias al aislamiento de Android, y está cubierta por el cifrado del almacenamiento del dispositivo.</li>
+  <li><b>Protección por defecto.</b> La copia de las tareas en Google está desactivada por defecto (ver
+  <a href="#es-kopia">apartado 5</a>), y Harmo no pide ningún permiso “por si acaso”. La app no contiene bibliotecas de
+  publicidad, análisis ni informes de fallos.</li>
+  <li><b>Conexiones locales.</b> El intercambio de datos con el reloj se hace por el canal del sistema Wear OS entre tus
+  dispositivos emparejados, y con el ordenador por Bluetooth, después de que lo apruebes en Chrome.</li>
+</ul>
+<p>El mayor riesgo real sigue siendo la pérdida o el robo de un dispositivo desbloqueado. Por eso recomendamos usar
+bloqueo de pantalla en el teléfono, el reloj y el ordenador.</p>
+
+<h2>10. Tus derechos</h2>
+<p>Tu plan está en tus dispositivos, así que ejerces tú mismo los derechos de los artículos 15 a 21 del RGPD,
+directamente en la app. No guardamos tu plan, por lo que en nuestro lado no hay nada que facilitar, rectificar ni
+borrar.</p>
+<table>
+  <tr><th>Derecho</th><th>Cómo ejercerlo en Harmo</th></tr>
+  <tr><td>Acceso</td><td>Consulta tus tareas, proyectos y notas en la app.</td></tr>
+  <tr><td>Rectificación</td><td>Edita una tarea, un proyecto o una nota.</td></tr>
+  <tr><td>Supresión</td><td>Borra una entrada, borra los datos de la app en los ajustes de Android o desinstala Harmo. La copia en Google se borra en tu cuenta de Google.</td></tr>
+  <tr><td>Limitación y oposición</td><td>Desactiva “Copia de las tareas en Google”, desconecta el ordenador o el reloj, desinstala la app.</td></tr>
+  <tr><td>Portabilidad</td><td>Pasa los datos a un teléfono nuevo con un cable, directamente de teléfono a teléfono o mediante la copia de seguridad de Android.</td></tr>
+</table>
+<p>Respecto a los datos que sí tratamos (datos del pedido y correspondencia, apartados 6 y 7), tienes derecho de
+acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición. Escríbenos a
+<a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a>. También tienes derecho a presentar una
+reclamación ante la autoridad de control polaca, el Presidente de la Oficina de Protección de Datos Personales
+(ul. Stawki 2, 00-193 Varsovia, <a href="https://uodo.gov.pl/en">uodo.gov.pl</a>), o ante la autoridad de control de tu
+país de residencia.</p>
+<p>Puedes consultar y borrar los datos que guarda Google (copia de seguridad, compras, cuenta de Google) en
+<a href="https://myaccount.google.com">myaccount.google.com</a>.</p>
+
+<h2>11. Transferencias de datos</h2>
+<p>No vendemos, compartimos ni transferimos datos de Harmo a nadie, tampoco fuera del Espacio Económico Europeo, porque
+no los tenemos. No usamos publicidad, análisis, informes de fallos ni otros servicios de terceros que puedan recibir
+datos de la app.</p>
+
+<h2>12. Menores</h2>
+<p>Harmo no está dirigida a menores. No recogemos a sabiendas datos de menores de 16 años.</p>
+
+<h2>13. Cambios en esta política</h2>
+<p>Si añadimos una función que envíe datos fuera de tus dispositivos (por ejemplo, una futura sincronización mediante
+una cuenta Szugers), la describiremos en esta política antes de ponerla a disposición. Esa función será opcional y
+requerirá tu consentimiento expreso. Anunciaremos los cambios importantes en esta página y en las notas de
+actualización de la tienda, con nuevo número de versión y fecha. Las versiones anteriores de esta política seguirán
+disponibles en la misma dirección.</p>
+<p>Publicada en: szugers.com/harmo/polityka-prywatnosci.html.</p>
+
+<p class="foot">Harmo · Szugers · <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a><br>
+<a href="polityka-prywatnosci-1.0.html#es">La versión anterior (1.0 del 22 de octubre de 2026)</a> no cubría la extensión Harmo para Chrome ni el interruptor
+“Copia de las tareas en Google”.</p>
 </section>
 
 </main>
@@ -282,7 +729,7 @@ Dirección: <a href="https://szugers.com/harmo/polityka-prywatnosci.html#es">szu
 (function () {
   var langs = ['pl', 'en', 'pt', 'es'];
   function pick() {
-    var h = location.hash.slice(1);
+    var h = location.hash.slice(1).split('-')[0];
     if (langs.indexOf(h) >= 0) return h;
     var n = (navigator.language || 'en').slice(0, 2).toLowerCase();
     return langs.indexOf(n) >= 0 ? n : 'en';
@@ -295,7 +742,11 @@ Dirección: <a href="https://szugers.com/harmo/polityka-prywatnosci.html#es">szu
     var h1 = document.querySelector('section#' + l + ' h1');
     if (h1) document.title = h1.textContent;
   }
-  window.addEventListener('hashchange', function () { show(); scrollTo(0, 0); });
+  window.addEventListener('hashchange', function () {
+    show();
+    var t = location.hash.length > 3 && document.getElementById(location.hash.slice(1));
+    if (t && t.tagName !== 'SECTION') t.scrollIntoView(); else scrollTo(0, 0);
+  });
   show();
 })();
 </script>
