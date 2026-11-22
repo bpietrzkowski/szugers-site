@@ -57,7 +57,7 @@
 <!-- ============================== PL ============================== -->
 <section id="pl" lang="pl">
 <h1>Polityka prywatności Harmo</h1>
-<p class="sub">Wersja 2.2 z 22 listopada 2026 r. Dotyczy aplikacji Harmo na Androida,
+<p class="sub">Wersja 2.3 z 22 listopada 2026 r. Dotyczy aplikacji Harmo na Androida,
 aplikacji Harmo na zegarki z Wear OS (z planszami i widżetami) oraz rozszerzenia Harmo dla Chrome.</p>
 
 <div class="lead">
@@ -88,10 +88,11 @@ jakieś dane, opisujemy uczciwie w punktach 6 i 7.</p>
   postęp. Zapisuje je baza danych w pamięci telefonu, dostępna tylko dla Harmo.</li>
   <li><b>Ustawienia:</b> wygląd, język, pora snu i pobudki, widok startowy, wygląd widżetów, data pierwszego uruchomienia
   (do liczenia okresu próbnego) i informacja, czy Harmo jest kupiona.</li>
+  <li><b>Połączenie z komputerem:</b> klucze parowania z komputerami, na których używasz Harmo dla Chrome.</li>
   <li><b>Na zegarku:</b> ostatni plan dnia i Lista, które zegarek dostał z telefonu.</li>
   <li><b>Powiadomienia innych aplikacji</b> (tylko gdy dasz Harmo dostęp do powiadomień, zob. punkt 4): nazwy
   aplikacji, które pokazały powiadomienie, liczba ich powiadomień z każdego z ostatnich 7 dni i Twój wybór przy każdej
-  aplikacji („Tylko licznik”, „Tytuł” albo „Treść”). Treści powiadomień Harmo nie zapisuje.</li>
+  aplikacji („Tylko licznik”, „Tytuł” albo „Treść”). Treści powiadomień Harmo nie zapisuje. Bez dostępu do powiadomień Harmo nie czyta powiadomień i nie zapisuje tych danych.</li>
   <li><b>W Chrome:</b> klucze parowania z Twoim telefonem i ustawienia widoku. Sam plan, stan telefonu i powiadomienia
   z telefonu są w Chrome tylko w pamięci, dopóki karta Harmo jest otwarta.</li>
 </ul>
@@ -112,11 +113,19 @@ połączenia z siecią. Klucze parowania są zapisane tylko lokalnie w Chrome (n
 <p>Gdy telefon jest połączony z komputerem, Android pokazuje stałe powiadomienie Harmo. To wymóg systemu dla usług,
 które działają w tle.</p>
 
-<h3>Pasek stanu telefonu</h3>
-<p>Jeśli włączysz w Ustawieniach Harmo pasek stanu, telefon pokazuje w swoim pasku stanu datę i kwadrat z liczbą
-powiadomień innych aplikacji. Każda z tych ikon to stałe powiadomienie Harmo. Do liczenia powiadomień Harmo potrzebuje
-dostępu do powiadomień, który włączasz sam w ustawieniach Androida. Zanim Harmo przeniesie Cię do tych ustawień,
-wyjaśnia, co będzie liczyć i co zapisze.</p>
+<h3>Pasek stanu i powiadomienia telefonu: tylko jeśli chcesz</h3>
+<p>Data i kwadrat w pasku stanu oraz powiadomienia telefonu w oknie Harmo dla Chrome są <b>domyślnie wyłączone</b>.
+Działają dopiero wtedy, gdy je włączysz. Datę i kwadrat włączasz w Ustawieniach Harmo, w części „Pasek stanu”.
+Kwadrat i powiadomienia w oknie Harmo dla Chrome działają dopiero po nadaniu Harmo dostępu do powiadomień w ustawieniach
+Androida. Bez tego dostępu Harmo nie czyta powiadomień innych aplikacji.</p>
+<p>Każda ikona w pasku stanu to stałe powiadomienie Harmo. Zanim Harmo przeniesie Cię do ustawień Androida, pokazuje okno
+„Dostęp do powiadomień”: co będzie liczyć, co i dokąd wysyła, co zapisze i jak cofnąć dostęp. Ten sam opis jest pod ikoną
+informacji przy przełączniku „Kwadrat zamiast innych powiadomień”.</p>
+<p><b>Jak wyłączyć czytanie powiadomień.</b> Dostęp do powiadomień cofniesz w każdej chwili w ustawieniach Androida, tam
+gdzie się go włącza. Wtedy Harmo przestaje czytać powiadomienia, a kwadrat i powiadomienia w oknie Harmo dla Chrome
+przestają działać. Samo wyłączenie kwadratu w Harmo chowa ikonę, ale nie cofa dostępu: dopóki dostęp jest nadany, Harmo
+dalej liczy powiadomienia dla okna Harmo dla Chrome. Liczniki zapisane wcześniej zostają na telefonie, dopóki nie
+wyczyścisz danych aplikacji albo jej nie odinstalujesz.</p>
 <h3>Stan telefonu i powiadomienia w oknie Harmo dla Chrome</h3>
 <p>Gdy telefon jest połączony z komputerem, wysyła do okna Harmo dla Chrome swój stan: poziom baterii, czy się ładuje,
 rodzaj sieci, siłę sygnału Wi-Fi i sieci komórkowej oraz liczbę powiadomień. Jeśli dasz Harmo dostęp do powiadomień,
@@ -126,7 +135,7 @@ wybierasz, co pokazywać. Domyślnie okno pokazuje przy każdej aplikacji tylko 
 „Treść”. Powiadomienia, które aplikacja albo Ty oznaczyliście jako tajne, okno dostaje tylko jako liczbę. Przy
 powiadomieniach poufnych, których treść telefon chowa na ekranie blokady, Harmo nie wysyła tekstu, dopóki w oknie jest
 włączone „Ukrywaj treść poufnych”. Przełącznik „Pokazuj powiadomienia w oknie” wyłącza listę i zostawia same liczby.</p>
-<p>Wszystko to idzie tym samym szyfrowanym połączeniem Bluetooth co plan, wyłącznie do Twojego sparowanego komputera,
+<p>Powiadomienia nie wychodzą poza Twoje urządzenia: telefon i sparowany komputer. Harmo nie wysyła ich do internetu, do nas ani do nikogo innego. Wszystko to idzie tym samym szyfrowanym połączeniem Bluetooth co plan, wyłącznie do Twojego sparowanego komputera,
 i znika z Chrome, gdy zamkniesz kartę Harmo. Gdy w oknie klikniesz „Odrzuć” przy powiadomieniu, Harmo zamyka je także
 w telefonie, chyba że wyłączysz to w oknie.</p>
 
@@ -142,6 +151,10 @@ trafia na Twoje konto Google, a my nie mamy do niej dostępu. Co trafia do kopii
   o zakupie. Dzięki temu po ponownej instalacji okres próbny i zakup nie zaczynają się od nowa. Kopię możesz w każdej
   chwili wyłączyć w ustawieniach Androida.</li>
 </ul>
+<p>Od Harmo 0.4.27 dwie rzeczy nigdy nie trafiają do kopii w Google, także przy włączonym przełączniku „Kopia zadań
+w Google”: klucze parowania z komputerami i lista aplikacji z licznikami powiadomień razem z Twoim wyborem przy każdej
+aplikacji. Po przywróceniu kopii na nowym telefonie trzeba więc ponownie sparować komputer, a lista aplikacji zaczyna się
+od zera.</p>
 <p>Gdy przenosisz dane na nowy telefon kablem albo bezpośrednio z telefonu na telefon, Android przenosi cały plan,
 bo dane nie opuszczają wtedy Twoich urządzeń.</p>
 <p>Kopię zapasową na koncie Google przechowuje i zabezpiecza Google, zgodnie z
@@ -172,7 +185,7 @@ w punkcie 10.</p>
   <tr><td>Usługa na pierwszym planie (podłączone urządzenie)</td><td>Utrzymanie połączenia z komputerem, gdy Harmo nie jest otwarta.</td></tr>
   <tr><td>Usługa na pierwszym planie (specjalne zastosowanie)</td><td>Ikony daty i kwadratu w pasku stanu, jeśli je włączysz. Od Androida 14 zwykłe stałe powiadomienie da się odrzucić gestem, a ikona usługi na pierwszym planie zostaje, dopóki nie wyłączysz jej w Harmo.</td></tr>
   <tr><td>Powiadomienia</td><td>Stałe powiadomienie, gdy telefon jest połączony z komputerem, i ikony paska stanu.</td></tr>
-  <tr><td>Dostęp do powiadomień</td><td>Liczba powiadomień innych aplikacji w kwadracie na pasku stanu i powiadomienia telefonu w oknie Harmo dla Chrome (punkt 4). Włączasz go sam w ustawieniach Androida i tam możesz go wyłączyć.</td></tr>
+  <tr><td>Dostęp do powiadomień</td><td>Domyślnie wyłączony. Liczba powiadomień innych aplikacji w kwadracie na pasku stanu i powiadomienia telefonu w oknie Harmo dla Chrome (punkt 4). Nadajesz go w ustawieniach Androida i tam w każdej chwili go cofasz. Wtedy Harmo przestaje czytać powiadomienia.</td></tr>
   <tr><td>Stan sieci</td><td>Rodzaj sieci i siła sygnału Wi-Fi w stanie telefonu, który widać w oknie Harmo dla Chrome. To uprawnienie nie daje dostępu do internetu.</td></tr>
   <tr><td>Uruchamianie po starcie</td><td>Wznowienie połączenia z komputerem i ikon paska stanu po ponownym uruchomieniu telefonu lub aktualizacji Harmo.</td></tr>
 </table>
@@ -194,9 +207,9 @@ Cały kod jest w paczce rozszerzenia, nie pobiera żadnego kodu z sieci.</p>
   izolacji systemu Android, i jest objęta szyfrowaniem pamięci urządzenia.</li>
   <li><b>Ochrona domyślna.</b> Kopia zadań w Google jest domyślnie wyłączona (zob. <a href="#pl-kopia">punkt 5</a>), a Harmo nie prosi o żadne uprawnienie
   na zapas. Kod aplikacji nie zawiera bibliotek reklamowych, analitycznych ani do raportowania awarii.</li>
-  <li><b>Powiadomienia.</b> Harmo czyta powiadomienia tylko po to, żeby je policzyć i, jeśli tak wybierzesz, pokazać
-  w oknie Harmo dla Chrome. Ich treść nie jest nigdzie zapisywana, a domyślnie żadna aplikacja nie przekazuje do okna
-  nic poza liczbą.</li>
+  <li><b>Powiadomienia.</b> Harmo czyta powiadomienia tylko wtedy, gdy dasz jej dostęp do powiadomień, i tylko po to, żeby je policzyć i, jeśli
+  tak wybierzesz, pokazać w oknie Harmo dla Chrome. Nie wychodzą poza Twój telefon i sparowany komputer. Ich treść nie
+  jest nigdzie zapisywana, a domyślnie żadna aplikacja nie przekazuje do okna nic poza liczbą.</li>
   <li><b>Połączenia lokalne.</b> Wymiana danych z zegarkiem idzie kanałem systemowym Wear OS w obrębie Twoich
   sparowanych urządzeń, a z komputerem przez Bluetooth, po Twoim zatwierdzeniu w oknie Chrome.</li>
 </ul>
@@ -211,7 +224,7 @@ Nie przechowujemy Twojego planu, więc nie mamy czego udostępnić, poprawić an
   <tr><td>Dostęp</td><td>Przeglądasz zadania, projekty i notatki w aplikacji.</td></tr>
   <tr><td>Sprostowanie</td><td>Edytujesz zadanie, projekt lub notatkę.</td></tr>
   <tr><td>Usunięcie</td><td>Usuwasz wpis, czyścisz dane aplikacji w ustawieniach Androida albo odinstalowujesz Harmo. Kopię w Google usuwasz na swoim koncie Google.</td></tr>
-  <tr><td>Ograniczenie i sprzeciw</td><td>Wyłączasz „Kopia zadań w Google”, rozłączasz komputer albo zegarek, odinstalowujesz aplikację.</td></tr>
+  <tr><td>Ograniczenie i sprzeciw</td><td>Wyłączasz „Kopia zadań w Google”, rozłączasz komputer albo zegarek, odinstalowujesz aplikację. Czytanie powiadomień wyłączasz, cofając Harmo dostęp do powiadomień w ustawieniach Androida.</td></tr>
   <tr><td>Przenoszenie</td><td>Przenosisz dane na nowy telefon kablem, bezpośrednio z telefonu na telefon albo przez kopię zapasową Androida.</td></tr>
 </table>
 <p>W zakresie danych, które rzeczywiście przetwarzamy (dane zamówienia i korespondencja, punkty 6 i 7), masz prawo
@@ -238,6 +251,7 @@ numerem wersji i datą. Poprzednie wersje polityki pozostaną dostępne pod tym 
 <p>Adres publikacji: szugers.com/harmo/polityka-prywatnosci.html.</p>
 
 <p class="foot">Harmo · Szugers · <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a><br>
+<a href="polityka-prywatnosci-2.2.html#pl">Wersja 2.2 z 22 listopada 2026 r.</a> nie mówiła wprost, że pasek stanu i powiadomienia w oknie Harmo dla Chrome są domyślnie wyłączone ani jak wyłączyć czytanie powiadomień, ani że klucze parowania i lista aplikacji z licznikami powiadomień nie trafiają do kopii w Google (punkty 3, 4, 5, 8, 9 i 10).<br>
 <a href="polityka-prywatnosci-2.1.html#pl">Wersja 2.1 z 21 listopada 2026 r.</a> nie opisywała paska stanu telefonu ani stanu telefonu i powiadomień w oknie Harmo dla Chrome (punkty 3, 4, 8 i 9).<br>
 <a href="polityka-prywatnosci-2.0.html#pl">Wersja 2.0 z 7 listopada 2026 r.</a> różniła się tylko jednym zdaniem w punkcie 4: okno wyboru Chrome pojawia się przy pierwszym połączeniu, potem Chrome łączy się z telefonem sam.<br>
 <a href="polityka-prywatnosci-1.0.html#pl">Poprzednia wersja (1.0 z 22 października 2026 r.)</a> nie obejmowała rozszerzenia Harmo dla Chrome ani przełącznika
@@ -247,7 +261,7 @@ numerem wersji i datą. Poprzednie wersje polityki pozostaną dostępne pod tym 
 <!-- ============================== EN ============================== -->
 <section id="en" lang="en">
 <h1>Harmo Privacy Policy</h1>
-<p class="sub">Version 2.2 of 22 November 2026. Applies to the Harmo app for Android, the Harmo app for Wear OS watches
+<p class="sub">Version 2.3 of 22 November 2026. Applies to the Harmo app for Android, the Harmo app for Wear OS watches
 (including its tiles and complications) and the Harmo for Chrome extension.</p>
 
 <div class="lead">
@@ -279,10 +293,11 @@ described openly in sections 6 and 7.</p>
   progress. They are stored in a database in your phone's storage that only Harmo can access.</li>
   <li><b>Settings:</b> theme, language, sleep and wake-up times, start view, widget look, the date of first launch
   (to count the trial period) and whether Harmo has been purchased.</li>
+  <li><b>Connection to a computer:</b> the pairing keys for the computers where you use Harmo for Chrome.</li>
   <li><b>On the watch:</b> the latest day plan and List received from the phone.</li>
   <li><b>Other apps' notifications</b> (only if you give Harmo notification access, see section 4): the names of apps
   that showed a notification, how many notifications each of them showed on each of the last 7 days, and your choice
-  for each app (“Count only”, “Title” or “Content”). Harmo does not store the content of notifications.</li>
+  for each app (“Count only”, “Title” or “Content”). Harmo does not store the content of notifications. Without notification access Harmo does not read notifications and stores none of this data.</li>
   <li><b>In Chrome:</b> the pairing keys for your phone and view settings. The plan itself, the phone status and the
   phone's notifications are kept in Chrome only in memory, while a Harmo tab is open.</li>
 </ul>
@@ -305,11 +320,19 @@ copy in Google is described in <a href="#en-kopia">section 5</a>).</p>
 <p>While the phone is connected to the computer, Android shows an ongoing Harmo notification. Android requires this for
 services running in the background.</p>
 
-<h3>Phone status bar</h3>
-<p>If you turn on the status bar in Harmo's Settings, your phone shows the date and a square with the number of
-notifications from other apps in its status bar. Each of these icons is an ongoing Harmo notification. To count
-notifications Harmo needs notification access, which you turn on yourself in Android settings. Before Harmo takes you
-to those settings, it explains what it will count and what it will store.</p>
+<h3>Status bar and phone notifications: only if you want them</h3>
+<p>The date and square in the status bar and the phone's notifications in the Harmo for Chrome window are <b>off by
+default</b>. They only work once you turn them on. You turn on the date and the square in Harmo's Settings, under
+“Status bar”. The square and the notifications in the Harmo for Chrome window only work after you give Harmo
+notification access in Android settings. Without that access Harmo does not read other apps' notifications.</p>
+<p>Each icon in the status bar is an ongoing Harmo notification. Before Harmo takes you to Android settings, it shows the
+“Notification access” window: what it will count, what it sends and where, what it stores and how to revoke access. The
+same text is behind the information icon next to the “Square instead of other notifications” switch.</p>
+<p><b>How to turn off notification reading.</b> You can revoke notification access at any time in Android settings,
+where you turn it on. Harmo then stops reading notifications, and the square and the notifications in the Harmo for
+Chrome window stop working. Turning off the square in Harmo only hides the icon, it does not revoke access: as long as
+access is granted, Harmo keeps counting notifications for the Harmo for Chrome window. Counts stored earlier stay on the
+phone until you clear the app's data or uninstall it.</p>
 <h3>Phone status and notifications in the Harmo for Chrome window</h3>
 <p>While the phone is connected to the computer, it sends its status to the Harmo for Chrome window: battery level,
 whether it is charging, network type, Wi-Fi and mobile signal strength, and the number of notifications. If you give
@@ -320,7 +343,7 @@ apps for which you choose “Title” or “Content” in the window. Notificati
 reach the window only as a number. For private notifications, whose content the phone hides on the lock screen, Harmo
 does not send the text while “Hide content of private ones” is on in the window. The “Show notifications in the window”
 switch turns the list off and leaves only the numbers.</p>
-<p>All of this travels over the same encrypted Bluetooth connection as the plan, only to your paired computer, and
+<p>Notifications do not leave your devices: your phone and your paired computer. Harmo does not send them to the internet, to us or to anyone else. All of this travels over the same encrypted Bluetooth connection as the plan, only to your paired computer, and
 disappears from Chrome when you close the Harmo tab. When you click “Dismiss” on a notification in the window, Harmo also
 dismisses it on the phone, unless you turn this off in the window.</p>
 
@@ -336,6 +359,10 @@ backup goes to your Google Account and we have no access to it. What goes into t
   period and the purchase do not start over after reinstalling. You can turn backup off at any time in Android
   settings.</li>
 </ul>
+<p>Since Harmo 0.4.27, two things never go into the Google backup, even with “Back up tasks to Google” on: the pairing
+keys for your computers and the list of apps with notification counts, together with your choice for each app. After
+restoring the backup on a new phone you therefore need to pair the computer again, and the list of apps starts from
+scratch.</p>
 <p>When you move to a new phone with a cable or directly from phone to phone, Android transfers your whole plan,
 because the data does not leave your devices in that case.</p>
 <p>The backup in your Google Account is stored and protected by Google under the
@@ -365,7 +392,7 @@ the law requires us to keep it. Your rights regarding this data are described in
   <tr><td>Foreground service (connected device)</td><td>Keeping the connection to the computer while Harmo is not open.</td></tr>
   <tr><td>Foreground service (special use)</td><td>The date and square icons in the status bar, if you turn them on. Since Android 14 an ordinary ongoing notification can be swiped away, while a foreground service icon stays until you turn it off in Harmo.</td></tr>
   <tr><td>Notifications</td><td>The ongoing notification while the phone is connected to the computer, and the status bar icons.</td></tr>
-  <tr><td>Notification access</td><td>The number of other apps' notifications in the square in the status bar, and the phone's notifications in the Harmo for Chrome window (section 4). You turn it on yourself in Android settings and can turn it off there.</td></tr>
+  <tr><td>Notification access</td><td>Off by default. The number of other apps' notifications in the square in the status bar, and the phone's notifications in the Harmo for Chrome window (section 4). You grant it in Android settings and can revoke it there at any time. Harmo then stops reading notifications.</td></tr>
   <tr><td>Network state</td><td>The network type and Wi-Fi signal strength in the phone status shown in the Harmo for Chrome window. This permission gives no internet access.</td></tr>
   <tr><td>Run at startup</td><td>Resuming the connection to the computer and the status bar icons after the phone restarts or Harmo is updated.</td></tr>
 </table>
@@ -391,9 +418,9 @@ code is packaged in the extension; it does not load any code from the network.</
   <li><b>Protection by default.</b> Backing up tasks to Google is off by default (see <a href="#en-kopia">section 5</a>),
   and Harmo does not request any permission just in case. The app contains no advertising, analytics or crash reporting
   libraries.</li>
-  <li><b>Notifications.</b> Harmo reads notifications only to count them and, if you choose so, to show them in the
-  Harmo for Chrome window. Their content is not stored anywhere, and by default no app passes anything to the window
-  except the number.</li>
+  <li><b>Notifications.</b> Harmo reads notifications only if you give it notification access, and only to count them and, if you choose
+  so, to show them in the Harmo for Chrome window. They do not leave your phone and your paired computer. Their content
+  is not stored anywhere, and by default no app passes anything to the window except the number.</li>
   <li><b>Local connections.</b> Data is exchanged with the watch over the Wear OS system channel within your paired
   devices, and with the computer over Bluetooth after you approve it in Chrome.</li>
 </ul>
@@ -408,7 +435,7 @@ We do not store your plan, so there is nothing on our side to provide, correct o
   <tr><td>Access</td><td>View your tasks, projects and notes in the app.</td></tr>
   <tr><td>Rectification</td><td>Edit a task, project or note.</td></tr>
   <tr><td>Erasure</td><td>Delete an entry, clear the app's data in Android settings or uninstall Harmo. Delete the Google backup in your Google Account.</td></tr>
-  <tr><td>Restriction and objection</td><td>Turn off “Back up tasks to Google”, disconnect the computer or watch, uninstall the app.</td></tr>
+  <tr><td>Restriction and objection</td><td>Turn off “Back up tasks to Google”, disconnect the computer or watch, uninstall the app. To stop notification reading, revoke Harmo's notification access in Android settings.</td></tr>
   <tr><td>Portability</td><td>Move your data to a new phone with a cable, directly from phone to phone or via Android backup.</td></tr>
 </table>
 <p>For the data we actually process (order details and correspondence, sections 6 and 7), you have the right of access,
@@ -435,6 +462,7 @@ date. Previous versions of this policy will remain available at the same address
 <p>Published at: szugers.com/harmo/polityka-prywatnosci.html.</p>
 
 <p class="foot">Harmo · Szugers · <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a><br>
+<a href="polityka-prywatnosci-2.2.html#en">Version 2.2 of 22 November 2026</a> did not say explicitly that the status bar and the notifications in the Harmo for Chrome window are off by default or how to turn off notification reading, nor that the pairing keys and the list of apps with notification counts do not go into the Google backup (sections 3, 4, 5, 8, 9 and 10).<br>
 <a href="polityka-prywatnosci-2.1.html#en">Version 2.1 of 21 November 2026</a> did not describe the phone status bar or the phone status and notifications in the Harmo for Chrome window (sections 3, 4, 8 and 9).<br>
 <a href="polityka-prywatnosci-2.0.html#en">Version 2.0 of 7 November 2026</a> differed only in one sentence in section 4: Chrome's device picker appears for the first connection, after that Chrome connects to the phone on its own.<br>
 <a href="polityka-prywatnosci-1.0.html#en">The previous version (1.0 of 22 October 2026)</a> did not cover the Harmo for Chrome extension or the “Back up tasks to
@@ -444,7 +472,7 @@ Google” switch.</p>
 <!-- ============================== PT ============================== -->
 <section id="pt" lang="pt">
 <h1>Política de privacidade do Harmo</h1>
-<p class="sub">Versão 2.2 de 22 de novembro de 2026. Aplica-se à aplicação Harmo para Android, à aplicação Harmo para
+<p class="sub">Versão 2.3 de 22 de novembro de 2026. Aplica-se à aplicação Harmo para Android, à aplicação Harmo para
 relógios Wear OS (incluindo blocos e complicações) e à extensão Harmo para Chrome.</p>
 
 <div class="lead">
@@ -477,11 +505,12 @@ RGPD não o exige. As exceções em que de facto tratamos alguns dados estão de
   progresso. São guardados numa base de dados na memória do telemóvel, acessível apenas ao Harmo.</li>
   <li><b>Definições:</b> aspeto, idioma, horas de dormir e de acordar, vista inicial, aspeto dos widgets, data da primeira
   utilização (para contar o período de avaliação) e se o Harmo foi comprado.</li>
+  <li><b>Ligação ao computador:</b> as chaves de emparelhamento com os computadores onde usa o Harmo para Chrome.</li>
   <li><b>No relógio:</b> o último plano do dia e a Lista recebidos do telemóvel.</li>
   <li><b>Notificações de outras aplicações</b> (apenas se der ao Harmo acesso às notificações, ver ponto 4): os nomes
   das aplicações que mostraram uma notificação, o número das suas notificações em cada um dos últimos 7 dias e a sua
   escolha para cada aplicação (“Só contador”, “Título” ou “Conteúdo”). O Harmo não guarda o conteúdo das
-  notificações.</li>
+  notificações. Sem acesso às notificações, o Harmo não lê notificações e não guarda nenhum destes dados.</li>
   <li><b>No Chrome:</b> as chaves de emparelhamento com o seu telemóvel e as definições de visualização. O plano em si,
   o estado do telemóvel e as notificações do telemóvel ficam no Chrome apenas em memória, enquanto o separador do Harmo
   estiver aberto.</li>
@@ -505,11 +534,20 @@ segurança bloqueia todas as ligações de rede. As chaves de emparelhamento fic
 <p>Enquanto o telemóvel está ligado ao computador, o Android mostra uma notificação permanente do Harmo. É um requisito
 do sistema para serviços que funcionam em segundo plano.</p>
 
-<h3>Barra de estado do telemóvel</h3>
-<p>Se ativar a barra de estado nas Definições do Harmo, o telemóvel mostra na sua barra de estado a data e um quadrado
-com o número de notificações de outras aplicações. Cada um destes ícones é uma notificação permanente do Harmo. Para
-contar as notificações, o Harmo precisa de acesso às notificações, que o utilizador ativa nas definições do Android.
-Antes de o levar a essas definições, o Harmo explica o que vai contar e o que vai guardar.</p>
+<h3>Barra de estado e notificações do telemóvel: só se quiser</h3>
+<p>A data e o quadrado na barra de estado e as notificações do telemóvel na janela do Harmo para Chrome estão
+<b>desativados por predefinição</b>. Só funcionam depois de os ativar. A data e o quadrado ativam-se nas Definições do
+Harmo, na parte “Barra de estado”. O quadrado e as notificações na janela do Harmo para Chrome só funcionam depois de dar
+ao Harmo acesso às notificações nas definições do Android. Sem esse acesso, o Harmo não lê as notificações de outras
+aplicações.</p>
+<p>Cada ícone na barra de estado é uma notificação permanente do Harmo. Antes de o levar às definições do Android, o Harmo
+mostra a janela “Acesso a notificações”: o que vai contar, o que envia e para onde, o que guarda e como retirar o acesso.
+O mesmo texto está por trás do ícone de informação junto ao interruptor “Quadrado em vez de outras notificações”.</p>
+<p><b>Como desligar a leitura de notificações.</b> Pode retirar o acesso às notificações a qualquer momento nas
+definições do Android, no mesmo sítio onde o ativa. A partir daí, o Harmo deixa de ler as notificações, e o quadrado e as
+notificações na janela do Harmo para Chrome deixam de funcionar. Desligar o quadrado no Harmo só esconde o ícone, não
+retira o acesso: enquanto o acesso estiver dado, o Harmo continua a contar as notificações para a janela do Harmo para
+Chrome. As contagens guardadas antes ficam no telemóvel até limpar os dados da aplicação ou a desinstalar.</p>
 <h3>Estado do telemóvel e notificações na janela do Harmo para Chrome</h3>
 <p>Enquanto o telemóvel está ligado ao computador, envia o seu estado para a janela do Harmo para Chrome: nível da
 bateria, se está a carregar, tipo de rede, intensidade do sinal Wi-Fi e da rede móvel e o número de notificações. Se
@@ -521,7 +559,7 @@ aplicação ou o utilizador marcou como secretas chegam à janela apenas como n�
 conteúdo o telemóvel esconde no ecrã de bloqueio, o Harmo não envia o texto enquanto a opção “Ocultar conteúdo das
 privadas” estiver ativada na janela. O interruptor “Mostrar notificações na janela” desliga a lista e deixa apenas os
 números.</p>
-<p>Tudo isto passa pela mesma ligação Bluetooth encriptada que o plano, apenas para o seu computador emparelhado, e
+<p>As notificações não saem dos seus dispositivos: o telemóvel e o computador emparelhado. O Harmo não as envia para a internet, para nós nem para mais ninguém. Tudo isto passa pela mesma ligação Bluetooth encriptada que o plano, apenas para o seu computador emparelhado, e
 desaparece do Chrome quando fecha o separador do Harmo. Quando clica em “Dispensar” numa notificação na janela, o Harmo
 fecha-a também no telemóvel, a menos que desative esta opção na janela.</p>
 
@@ -539,6 +577,10 @@ definições:</p>
   utilização e informação de compra. Assim, após reinstalar, o período de avaliação e a compra não recomeçam do zero.
   Pode desativar a cópia a qualquer momento nas definições do Android.</li>
 </ul>
+<p>A partir do Harmo 0.4.27, duas coisas nunca vão para a cópia na Google, mesmo com “Cópia das tarefas na Google”
+ligada: as chaves de emparelhamento com os computadores e a lista de aplicações com as contagens de notificações,
+juntamente com a sua escolha para cada aplicação. Depois de restaurar a cópia num telemóvel novo, é por isso preciso
+emparelhar de novo o computador, e a lista de aplicações começa do zero.</p>
 <p>Quando transfere os dados para um novo telemóvel por cabo ou diretamente de telemóvel para telemóvel, o Android
 transfere todo o plano, porque nesse caso os dados não saem dos seus dispositivos.</p>
 <p>A cópia de segurança na Conta Google é guardada e protegida pela Google, nos termos da
@@ -569,7 +611,7 @@ descritos no ponto 10.</p>
   <tr><td>Serviço em primeiro plano (dispositivo ligado)</td><td>Manter a ligação ao computador quando o Harmo não está aberto.</td></tr>
   <tr><td>Serviço em primeiro plano (utilização especial)</td><td>Os ícones da data e do quadrado na barra de estado, se os ativar. Desde o Android 14, uma notificação permanente comum pode ser dispensada com um gesto, enquanto o ícone de um serviço em primeiro plano fica até o desativar no Harmo.</td></tr>
   <tr><td>Notificações</td><td>A notificação permanente enquanto o telemóvel está ligado ao computador e os ícones da barra de estado.</td></tr>
-  <tr><td>Acesso às notificações</td><td>O número de notificações de outras aplicações no quadrado da barra de estado e as notificações do telemóvel na janela do Harmo para Chrome (ponto 4). Ativa-o nas definições do Android e pode desativá-lo aí.</td></tr>
+  <tr><td>Acesso às notificações</td><td>Desativado por predefinição. O número de notificações de outras aplicações no quadrado da barra de estado e as notificações do telemóvel na janela do Harmo para Chrome (ponto 4). Dá-o nas definições do Android e pode retirá-lo aí a qualquer momento. A partir daí, o Harmo deixa de ler as notificações.</td></tr>
   <tr><td>Estado da rede</td><td>O tipo de rede e a intensidade do sinal Wi-Fi no estado do telemóvel mostrado na janela do Harmo para Chrome. Esta permissão não dá acesso à internet.</td></tr>
   <tr><td>Executar no arranque</td><td>Retomar a ligação ao computador e os ícones da barra de estado depois de reiniciar o telemóvel ou de atualizar o Harmo.</td></tr>
 </table>
@@ -594,9 +636,9 @@ cookies nem transferências. Todo o código está incluído na extensão; não c
   <li><b>Proteção por predefinição.</b> A cópia das tarefas na Google está desativada por predefinição (ver
   <a href="#pt-kopia">ponto 5</a>), e o Harmo não pede nenhuma permissão “para o caso de”. A aplicação não contém
   bibliotecas de publicidade, de análise nem de relatórios de falhas.</li>
-  <li><b>Notificações.</b> O Harmo lê as notificações apenas para as contar e, se assim escolher, para as mostrar na
-  janela do Harmo para Chrome. O seu conteúdo não é guardado em lado nenhum e, por predefinição, nenhuma aplicação passa
-  à janela mais do que o número.</li>
+  <li><b>Notificações.</b> O Harmo só lê notificações se lhe der acesso às notificações, e apenas para as contar e, se assim escolher,
+  para as mostrar na janela do Harmo para Chrome. Não saem do seu telemóvel nem do computador emparelhado. O seu conteúdo
+  não é guardado em lado nenhum e, por predefinição, nenhuma aplicação passa para a janela nada além do número.</li>
   <li><b>Ligações locais.</b> A troca de dados com o relógio passa pelo canal do sistema Wear OS entre os seus
   dispositivos emparelhados, e com o computador por Bluetooth, depois de a aprovar no Chrome.</li>
 </ul>
@@ -612,7 +654,7 @@ ou apagar.</p>
   <tr><td>Acesso</td><td>Consulte as tarefas, projetos e notas na aplicação.</td></tr>
   <tr><td>Retificação</td><td>Edite uma tarefa, projeto ou nota.</td></tr>
   <tr><td>Apagamento</td><td>Apague uma entrada, limpe os dados da aplicação nas definições do Android ou desinstale o Harmo. A cópia na Google apaga-se na sua Conta Google.</td></tr>
-  <tr><td>Limitação e oposição</td><td>Desative “Cópia das tarefas na Google”, desligue o computador ou o relógio, desinstale a aplicação.</td></tr>
+  <tr><td>Limitação e oposição</td><td>Desative “Cópia das tarefas na Google”, desligue o computador ou o relógio, desinstale a aplicação. Para deixar de ler notificações, retire ao Harmo o acesso às notificações nas definições do Android.</td></tr>
   <tr><td>Portabilidade</td><td>Transfira os dados para um novo telemóvel por cabo, diretamente de telemóvel para telemóvel ou através da cópia de segurança do Android.</td></tr>
 </table>
 <p>Quanto aos dados que de facto tratamos (dados da encomenda e correspondência, pontos 6 e 7), tem direito de acesso,
@@ -640,6 +682,7 @@ disponíveis no mesmo endereço.</p>
 <p>Publicada em: szugers.com/harmo/polityka-prywatnosci.html.</p>
 
 <p class="foot">Harmo · Szugers · <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a><br>
+<a href="polityka-prywatnosci-2.2.html#pt">A versão 2.2 de 22 de novembro de 2026</a> não dizia expressamente que a barra de estado e as notificações na janela do Harmo para Chrome estão desativadas por predefinição nem como desligar a leitura de notificações, nem que as chaves de emparelhamento e a lista de aplicações com contagens de notificações não vão para a cópia na Google (pontos 3, 4, 5, 8, 9 e 10).<br>
 <a href="polityka-prywatnosci-2.1.html#pt">A versão 2.1 de 21 de novembro de 2026</a> não descrevia a barra de estado do telemóvel nem o estado do telemóvel e as notificações na janela do Harmo para Chrome (pontos 3, 4, 8 e 9).<br>
 <a href="polityka-prywatnosci-2.0.html#pt">A versão 2.0 de 7 de novembro de 2026</a> diferia apenas numa frase do ponto 4: a janela de seleção do Chrome aparece na primeira ligação e depois o Chrome liga-se sozinho ao telemóvel.<br>
 <a href="polityka-prywatnosci-1.0.html#pt">A versão anterior (1.0 de 22 de outubro de 2026)</a> não abrangia a extensão Harmo para Chrome nem o interruptor
@@ -649,7 +692,7 @@ disponíveis no mesmo endereço.</p>
 <!-- ============================== ES ============================== -->
 <section id="es" lang="es">
 <h1>Política de privacidad de Harmo</h1>
-<p class="sub">Versión 2.2 del 22 de noviembre de 2026. Se aplica a la app Harmo para Android, a la app Harmo para relojes
+<p class="sub">Versión 2.3 del 22 de noviembre de 2026. Se aplica a la app Harmo para Android, a la app Harmo para relojes
 Wear OS (incluidas sus tarjetas y complicaciones) y a la extensión Harmo para Chrome.</p>
 
 <div class="lead">
@@ -682,11 +725,12 @@ lo exige. Las excepciones en las que sí tratamos algunos datos se describen con
   progreso. Se guardan en una base de datos en la memoria del teléfono, a la que solo accede Harmo.</li>
   <li><b>Ajustes:</b> aspecto, idioma, horas de dormir y despertar, vista inicial, aspecto de los widgets, fecha del
   primer inicio (para contar el periodo de prueba) y si Harmo se ha comprado.</li>
+  <li><b>Conexión con el ordenador:</b> las claves de emparejamiento con los ordenadores en los que usas Harmo para Chrome.</li>
   <li><b>En el reloj:</b> el último plan del día y la Lista recibidos del teléfono.</li>
   <li><b>Notificaciones de otras apps</b> (solo si das a Harmo acceso a las notificaciones, ver apartado 4): los nombres
   de las apps que mostraron una notificación, cuántas notificaciones mostró cada una en cada uno de los últimos 7 días y
   tu elección para cada app (“Solo contador”, “Título” o “Contenido”). Harmo no guarda el contenido de las
-  notificaciones.</li>
+  notificaciones. Sin acceso a las notificaciones, Harmo no lee notificaciones ni guarda ninguno de estos datos.</li>
   <li><b>En Chrome:</b> las claves de emparejamiento con tu teléfono y los ajustes de vista. El plan en sí, el estado
   del teléfono y sus notificaciones están en Chrome solo en memoria, mientras la pestaña de Harmo está abierta.</li>
 </ul>
@@ -709,11 +753,22 @@ sincronizan con tu cuenta de Google; la única copia en Google se describe en el
 <p>Mientras el teléfono está conectado al ordenador, Android muestra una notificación permanente de Harmo. Es un requisito
 del sistema para los servicios que funcionan en segundo plano.</p>
 
-<h3>Barra de estado del teléfono</h3>
-<p>Si activas la barra de estado en los Ajustes de Harmo, el teléfono muestra en su barra de estado la fecha y un
-cuadrado con el número de notificaciones de otras apps. Cada uno de estos iconos es una notificación permanente de
-Harmo. Para contar las notificaciones, Harmo necesita acceso a las notificaciones, que activas tú en los ajustes de
-Android. Antes de llevarte a esos ajustes, Harmo explica qué va a contar y qué va a guardar.</p>
+<h3>Barra de estado y notificaciones del teléfono: solo si quieres</h3>
+<p>La fecha y el cuadrado de la barra de estado y las notificaciones del teléfono en la ventana de Harmo para Chrome están
+<b>desactivados por defecto</b>. Solo funcionan cuando los activas. La fecha y el cuadrado se activan en los Ajustes de
+Harmo, en la parte “Barra de estado”. El cuadrado y las notificaciones en la ventana de Harmo para Chrome solo funcionan
+cuando das a Harmo acceso a las notificaciones en los ajustes de Android. Sin ese acceso, Harmo no lee las notificaciones
+de otras apps.</p>
+<p>Cada icono de la barra de estado es una notificación permanente de Harmo. Antes de llevarte a los ajustes de Android,
+Harmo muestra la ventana “Acceso a notificaciones”: qué va a contar, qué envía y adónde, qué guarda y cómo retirar el
+acceso. El mismo texto está tras el icono de información junto al interruptor “Cuadrado en lugar de otras
+notificaciones”.</p>
+<p><b>Cómo desactivar la lectura de notificaciones.</b> Puedes retirar el acceso a las notificaciones en cualquier momento
+en los ajustes de Android, donde se activa. Entonces Harmo deja de leer las notificaciones, y el cuadrado y las
+notificaciones en la ventana de Harmo para Chrome dejan de funcionar. Desactivar el cuadrado en Harmo solo oculta el
+icono, no retira el acceso: mientras el acceso esté concedido, Harmo sigue contando las notificaciones para la ventana de
+Harmo para Chrome. Los recuentos guardados antes se quedan en el teléfono hasta que borres los datos de la app o la
+desinstales.</p>
 <h3>Estado del teléfono y notificaciones en la ventana de Harmo para Chrome</h3>
 <p>Mientras el teléfono está conectado al ordenador, envía su estado a la ventana de Harmo para Chrome: nivel de
 batería, si se está cargando, tipo de red, intensidad de la señal Wi-Fi y de la red móvil y el número de
@@ -725,7 +780,7 @@ ventana. Las notificaciones que la app o tú habéis marcado como secretas llega
 notificaciones privadas, cuyo contenido el teléfono oculta en la pantalla de bloqueo, Harmo no envía el texto mientras
 “Ocultar el contenido de las privadas” esté activado en la ventana. El interruptor “Mostrar notificaciones en la
 ventana” desactiva la lista y deja solo los números.</p>
-<p>Todo esto viaja por la misma conexión Bluetooth cifrada que el plan, solo a tu ordenador emparejado, y desaparece de
+<p>Las notificaciones no salen de tus dispositivos: el teléfono y el ordenador emparejado. Harmo no las envía a internet, a nosotros ni a nadie más. Todo esto viaja por la misma conexión Bluetooth cifrada que el plan, solo a tu ordenador emparejado, y desaparece de
 Chrome cuando cierras la pestaña de Harmo. Cuando haces clic en “Descartar” en una notificación de la ventana, Harmo
 también la cierra en el teléfono, salvo que desactives esta opción en la ventana.</p>
 
@@ -743,6 +798,10 @@ ajustes:</p>
   inicio e información de compra. Así, tras reinstalar, el periodo de prueba y la compra no empiezan de cero. Puedes
   desactivar la copia en cualquier momento en los ajustes de Android.</li>
 </ul>
+<p>Desde Harmo 0.4.27, dos cosas nunca van a la copia en Google, ni siquiera con “Copia de las tareas en Google”
+activada: las claves de emparejamiento con los ordenadores y la lista de apps con los recuentos de notificaciones, junto
+con tu elección para cada app. Por eso, después de restaurar la copia en un teléfono nuevo hay que volver a emparejar el
+ordenador, y la lista de apps empieza de cero.</p>
 <p>Cuando pasas los datos a un teléfono nuevo con un cable o directamente de teléfono a teléfono, Android transfiere todo
 el plan, porque en ese caso los datos no salen de tus dispositivos.</p>
 <p>Google guarda y protege la copia de seguridad de tu cuenta de Google conforme a la
@@ -773,7 +832,7 @@ apartado 10.</p>
   <tr><td>Servicio en primer plano (dispositivo conectado)</td><td>Mantener la conexión con el ordenador cuando Harmo no está abierta.</td></tr>
   <tr><td>Servicio en primer plano (uso especial)</td><td>Los iconos de la fecha y del cuadrado en la barra de estado, si los activas. Desde Android 14, una notificación permanente normal se puede descartar con un gesto, mientras que el icono de un servicio en primer plano se queda hasta que lo desactives en Harmo.</td></tr>
   <tr><td>Notificaciones</td><td>La notificación permanente mientras el teléfono está conectado al ordenador y los iconos de la barra de estado.</td></tr>
-  <tr><td>Acceso a notificaciones</td><td>El número de notificaciones de otras apps en el cuadrado de la barra de estado y las notificaciones del teléfono en la ventana de Harmo para Chrome (apartado 4). Lo activas tú en los ajustes de Android y puedes desactivarlo allí.</td></tr>
+  <tr><td>Acceso a notificaciones</td><td>Desactivado por defecto. El número de notificaciones de otras apps en el cuadrado de la barra de estado y las notificaciones del teléfono en la ventana de Harmo para Chrome (apartado 4). Lo concedes en los ajustes de Android y allí puedes retirarlo en cualquier momento. Entonces Harmo deja de leer las notificaciones.</td></tr>
   <tr><td>Estado de la red</td><td>El tipo de red y la intensidad de la señal Wi-Fi en el estado del teléfono que se ve en la ventana de Harmo para Chrome. Este permiso no da acceso a internet.</td></tr>
   <tr><td>Ejecutar al iniciar</td><td>Reanudar la conexión con el ordenador y los iconos de la barra de estado tras reiniciar el teléfono o actualizar Harmo.</td></tr>
 </table>
@@ -798,9 +857,9 @@ pestañas, historial, cookies ni descargas. Todo el código está incluido en la
   <li><b>Protección por defecto.</b> La copia de las tareas en Google está desactivada por defecto (ver
   <a href="#es-kopia">apartado 5</a>), y Harmo no pide ningún permiso “por si acaso”. La app no contiene bibliotecas de
   publicidad, análisis ni informes de fallos.</li>
-  <li><b>Notificaciones.</b> Harmo lee las notificaciones solo para contarlas y, si así lo eliges, mostrarlas en la
-  ventana de Harmo para Chrome. Su contenido no se guarda en ningún sitio y, por defecto, ninguna app pasa a la ventana
-  nada más que el número.</li>
+  <li><b>Notificaciones.</b> Harmo solo lee notificaciones si le das acceso a las notificaciones, y solo para contarlas y, si así lo
+  eliges, mostrarlas en la ventana de Harmo para Chrome. No salen de tu teléfono ni de tu ordenador emparejado. Su
+  contenido no se guarda en ningún sitio y, por defecto, ninguna app pasa a la ventana nada más que el número.</li>
   <li><b>Conexiones locales.</b> El intercambio de datos con el reloj se hace por el canal del sistema Wear OS entre tus
   dispositivos emparejados, y con el ordenador por Bluetooth, después de que lo apruebes en Chrome.</li>
 </ul>
@@ -816,7 +875,7 @@ borrar.</p>
   <tr><td>Acceso</td><td>Consulta tus tareas, proyectos y notas en la app.</td></tr>
   <tr><td>Rectificación</td><td>Edita una tarea, un proyecto o una nota.</td></tr>
   <tr><td>Supresión</td><td>Borra una entrada, borra los datos de la app en los ajustes de Android o desinstala Harmo. La copia en Google se borra en tu cuenta de Google.</td></tr>
-  <tr><td>Limitación y oposición</td><td>Desactiva “Copia de las tareas en Google”, desconecta el ordenador o el reloj, desinstala la app.</td></tr>
+  <tr><td>Limitación y oposición</td><td>Desactiva “Copia de las tareas en Google”, desconecta el ordenador o el reloj, desinstala la app. Para dejar de leer notificaciones, retira a Harmo el acceso a las notificaciones en los ajustes de Android.</td></tr>
   <tr><td>Portabilidad</td><td>Pasa los datos a un teléfono nuevo con un cable, directamente de teléfono a teléfono o mediante la copia de seguridad de Android.</td></tr>
 </table>
 <p>Respecto a los datos que sí tratamos (datos del pedido y correspondencia, apartados 6 y 7), tienes derecho de
@@ -845,6 +904,7 @@ disponibles en la misma dirección.</p>
 <p>Publicada en: szugers.com/harmo/polityka-prywatnosci.html.</p>
 
 <p class="foot">Harmo · Szugers · <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a><br>
+<a href="polityka-prywatnosci-2.2.html#es">La versión 2.2 del 22 de noviembre de 2026</a> no decía expresamente que la barra de estado y las notificaciones en la ventana de Harmo para Chrome están desactivadas por defecto ni cómo desactivar la lectura de notificaciones, ni que las claves de emparejamiento y la lista de apps con recuentos de notificaciones no van a la copia en Google (apartados 3, 4, 5, 8, 9 y 10).<br>
 <a href="polityka-prywatnosci-2.1.html#es">La versión 2.1 del 21 de noviembre de 2026</a> no describía la barra de estado del teléfono ni el estado del teléfono y las notificaciones en la ventana de Harmo para Chrome (apartados 3, 4, 8 y 9).<br>
 <a href="polityka-prywatnosci-2.0.html#es">La versión 2.0 del 7 de noviembre de 2026</a> solo se diferenciaba en una frase del punto 4: la ventana de selección de Chrome aparece en la primera conexión y después Chrome se conecta al teléfono por sí solo.<br>
 <a href="polityka-prywatnosci-1.0.html#es">La versión anterior (1.0 del 22 de octubre de 2026)</a> no cubría la extensión Harmo para Chrome ni el interruptor
@@ -854,7 +914,7 @@ disponibles en la misma dirección.</p>
 <!-- ============================== CS ============================== -->
 <section id="cs" lang="cs">
 <h1>Zásady ochrany osobních údajů Harmo</h1>
-<p class="sub">Verze 2.2 ze dne 22. listopadu 2026. Platí pro aplikaci Harmo pro Android, aplikaci Harmo pro hodinky
+<p class="sub">Verze 2.3 ze dne 22. listopadu 2026. Platí pro aplikaci Harmo pro Android, aplikaci Harmo pro hodinky
 s Wear OS (včetně dlaždic a komplikací) a rozšíření Harmo pro Chrome.</p>
 
 <div class="lead">
@@ -886,10 +946,11 @@ otevřeně popisujeme v bodech 6 a 7.</p>
   Ukládá je databáze v paměti telefonu, ke které má přístup jen Harmo.</li>
   <li><b>Nastavení:</b> vzhled, jazyk, doba spánku a vstávání, úvodní zobrazení, vzhled widgetů, datum prvního spuštění
   (pro výpočet zkušební doby) a informace, zda je Harmo zakoupena.</li>
+  <li><b>Spojení s počítačem:</b> klíče pro spárování s počítači, na kterých používáte Harmo pro Chrome.</li>
   <li><b>V hodinkách:</b> poslední plán dne a Seznam, které hodinky dostaly z telefonu.</li>
   <li><b>Oznámení jiných aplikací</b> (jen pokud Harmo udělíte přístup k oznámením, viz bod 4): názvy aplikací, které
   zobrazily oznámení, počet jejich oznámení za každý z posledních 7 dní a vaše volba u každé aplikace („Jen počet“,
-  „Název“ nebo „Obsah“). Obsah oznámení Harmo neukládá.</li>
+  „Název“ nebo „Obsah“). Obsah oznámení Harmo neukládá. Bez přístupu k oznámením Harmo oznámení nečte a žádná z těchto dat neukládá.</li>
   <li><b>V Chrome:</b> klíče pro spárování s vaším telefonem a nastavení zobrazení. Samotný plán, stav telefonu
   a oznámení z telefonu jsou v Chrome jen v paměti, dokud je otevřená karta Harmo.</li>
 </ul>
@@ -910,11 +971,18 @@ uloženy jen místně v Chrome (nesynchronizují se s účtem Google; jedinou ko
 <p>Když je telefon připojen k počítači, Android zobrazuje trvalé oznámení Harmo. Systém to vyžaduje u služeb běžících
 na pozadí.</p>
 
-<h3>Stavový řádek telefonu</h3>
-<p>Pokud v Nastavení Harmo zapnete stavový řádek, telefon zobrazí ve svém stavovém řádku datum a čtverec s počtem
-oznámení jiných aplikací. Každá z těchto ikon je trvalé oznámení Harmo. K počítání oznámení potřebuje Harmo přístup
-k oznámením, který zapínáte sami v nastavení Androidu. Než vás Harmo do tohoto nastavení přenese, vysvětlí, co bude
-počítat a co uloží.</p>
+<h3>Stavový řádek a oznámení telefonu: jen pokud chcete</h3>
+<p>Datum a čtverec ve stavovém řádku a oznámení telefonu v okně Harmo pro Chrome jsou <b>ve výchozím stavu vypnuté</b>.
+Fungují teprve tehdy, když je zapnete. Datum a čtverec zapínáte v Nastavení Harmo, v části „Stavový řádek“. Čtverec
+a oznámení v okně Harmo pro Chrome fungují teprve poté, co Harmo dáte přístup k oznámením v nastavení Androidu. Bez
+tohoto přístupu Harmo oznámení jiných aplikací nečte.</p>
+<p>Každá ikona ve stavovém řádku je trvalé oznámení Harmo. Než vás Harmo přenese do nastavení Androidu, ukáže okno
+„Přístup k oznámením“: co bude počítat, co a kam posílá, co uloží a jak přístup odebrat. Stejný text je pod ikonou
+informací u přepínače „Čtverec místo jiných oznámení“.</p>
+<p><b>Jak vypnout čtení oznámení.</b> Přístup k oznámením můžete kdykoli odebrat v nastavení Androidu, tam, kde se
+zapíná. Pak Harmo přestane oznámení číst a čtverec i oznámení v okně Harmo pro Chrome přestanou fungovat. Samotné
+vypnutí čtverce v Harmo jen skryje ikonu, přístup neodebere: dokud je přístup udělen, Harmo dál počítá oznámení pro okno
+Harmo pro Chrome. Dříve uložené počty zůstávají v telefonu, dokud nesmažete data aplikace nebo ji neodinstalujete.</p>
 <h3>Stav telefonu a oznámení v okně Harmo pro Chrome</h3>
 <p>Když je telefon připojen k počítači, posílá do okna Harmo pro Chrome svůj stav: úroveň baterie, zda se nabíjí, typ
 sítě, sílu signálu Wi-Fi a mobilní sítě a počet oznámení. Pokud Harmo udělíte přístup k oznámením, okno zobrazuje
@@ -924,7 +992,7 @@ oznámení se do okna dostane jen z aplikací, u kterých v okně sami zvolíte 
 aplikace nebo vy označíte jako tajná, se do okna dostanou jen jako počet. U důvěrných oznámení, jejichž obsah telefon
 skrývá na zamykací obrazovce, Harmo neposílá text, dokud je v okně zapnuté „Skrývat obsah důvěrných“. Přepínač
 „Zobrazovat oznámení v okně“ seznam vypne a nechá jen počty.</p>
-<p>To vše jde stejným šifrovaným spojením Bluetooth jako plán, jen do vašeho spárovaného počítače, a zmizí z Chrome,
+<p>Oznámení neopouštějí vaše zařízení: telefon a spárovaný počítač. Harmo je neposílá na internet, nám ani nikomu jinému. To vše jde stejným šifrovaným spojením Bluetooth jako plán, jen do vašeho spárovaného počítače, a zmizí z Chrome,
 když zavřete kartu Harmo. Když v okně u oznámení kliknete na „Zavřít“, Harmo ho zavře i v telefonu, pokud tuto
 možnost v okně nevypnete.</p>
 
@@ -939,6 +1007,9 @@ vašeho účtu Google a my k ní nemáme přístup. Co se do zálohy dostane, z�
   jen nastavení aplikace: vzhled, jazyk, vzhled widgetů, datum prvního spuštění a informace o nákupu. Díky tomu po
   přeinstalaci nezačíná zkušební doba ani nákup znovu. Zálohu můžete kdykoli vypnout v nastavení Androidu.</li>
 </ul>
+<p>Od Harmo 0.4.27 se do zálohy v Googlu nikdy nedostanou dvě věci, ani při zapnutém přepínači „Záloha úkolů
+v Googlu“: klíče pro spárování s počítači a seznam aplikací s počty oznámení spolu s vaší volbou u každé aplikace. Po
+obnovení zálohy v novém telefonu proto musíte počítač spárovat znovu a seznam aplikací začíná od nuly.</p>
 <p>Když údaje přenášíte do nového telefonu kabelem nebo přímo z telefonu do telefonu, Android přenese celý plán, protože
 údaje přitom neopustí vaše zařízení.</p>
 <p>Zálohu ve vašem účtu Google uchovává a chrání Google podle
@@ -967,7 +1038,7 @@ nevyžadují uchovat. Vaše práva k těmto údajům popisuje bod 10.</p>
   <tr><td>Služba v popředí (připojené zařízení)</td><td>Udržení spojení s počítačem, když Harmo není otevřená.</td></tr>
   <tr><td>Služba v popředí (zvláštní použití)</td><td>Ikony data a čtverce ve stavovém řádku, pokud je zapnete. Od Androidu 14 lze běžné trvalé oznámení zavřít gestem, kdežto ikona služby v popředí zůstane, dokud ji v Harmo nevypnete.</td></tr>
   <tr><td>Oznámení</td><td>Trvalé oznámení, když je telefon připojen k počítači, a ikony stavového řádku.</td></tr>
-  <tr><td>Přístup k oznámením</td><td>Počet oznámení jiných aplikací ve čtverci na stavovém řádku a oznámení telefonu v okně Harmo pro Chrome (bod 4). Zapínáte ho sami v nastavení Androidu a tam ho můžete vypnout.</td></tr>
+  <tr><td>Přístup k oznámením</td><td>Ve výchozím stavu vypnutý. Počet oznámení jiných aplikací ve čtverci na stavovém řádku a oznámení telefonu v okně Harmo pro Chrome (bod 4). Udělujete ho v nastavení Androidu a tam ho můžete kdykoli odebrat. Pak Harmo přestane oznámení číst.</td></tr>
   <tr><td>Stav sítě</td><td>Typ sítě a síla signálu Wi-Fi ve stavu telefonu, který vidíte v okně Harmo pro Chrome. Toto oprávnění nedává přístup k internetu.</td></tr>
   <tr><td>Spuštění po startu</td><td>Obnovení spojení s počítačem a ikon stavového řádku po restartu telefonu nebo aktualizaci Harmo.</td></tr>
 </table>
@@ -991,9 +1062,9 @@ kód je součástí rozšíření; žádný kód nestahuje ze sítě.</p>
   <li><b>Výchozí ochrana.</b> Záloha úkolů v Googlu je ve výchozím stavu vypnutá (viz <a href="#cs-kopia">bod 5</a>)
   a Harmo nežádá o žádné oprávnění „pro jistotu“. Aplikace neobsahuje reklamní, analytické knihovny ani knihovny pro
   hlášení pádů.</li>
-  <li><b>Oznámení.</b> Harmo čte oznámení jen proto, aby je spočítala, a pokud si to zvolíte, zobrazila je v okně
-  Harmo pro Chrome. Jejich obsah se nikam neukládá a ve výchozím stavu žádná aplikace nepředává do okna nic kromě
-  počtu.</li>
+  <li><b>Oznámení.</b> Harmo čte oznámení jen tehdy, když jí dáte přístup k oznámením, a jen proto, aby je spočítala, a pokud si to
+  zvolíte, ukázala v okně Harmo pro Chrome. Neopouštějí váš telefon a spárovaný počítač. Jejich obsah se nikde neukládá
+  a ve výchozím stavu žádná aplikace nepředává do okna nic kromě počtu.</li>
   <li><b>Místní spojení.</b> Výměna údajů s hodinkami probíhá systémovým kanálem Wear OS v rámci vašich spárovaných
   zařízení a s počítačem přes Bluetooth, po vašem potvrzení v Chrome.</li>
 </ul>
@@ -1008,7 +1079,7 @@ neuchováváme, takže na naší straně není co zpřístupnit, opravit ani sma
   <tr><td>Přístup</td><td>Prohlížíte si úkoly, projekty a poznámky v aplikaci.</td></tr>
   <tr><td>Oprava</td><td>Upravíte úkol, projekt nebo poznámku.</td></tr>
   <tr><td>Výmaz</td><td>Smažete záznam, vymažete data aplikace v nastavení Androidu nebo Harmo odinstalujete. Zálohu v Googlu smažete ve svém účtu Google.</td></tr>
-  <tr><td>Omezení a námitka</td><td>Vypnete „Záloha úkolů v Googlu“, odpojíte počítač nebo hodinky, odinstalujete aplikaci.</td></tr>
+  <tr><td>Omezení a námitka</td><td>Vypnete „Záloha úkolů v Googlu“, odpojíte počítač nebo hodinky, odinstalujete aplikaci. Čtení oznámení vypnete tak, že Harmo odeberete přístup k oznámením v nastavení Androidu.</td></tr>
   <tr><td>Přenositelnost</td><td>Přenesete údaje do nového telefonu kabelem, přímo z telefonu do telefonu nebo přes zálohu Androidu.</td></tr>
 </table>
 <p>U údajů, které skutečně zpracováváme (údaje o objednávce a korespondence, body 6 a 7), máte právo na přístup, opravu,
@@ -1036,6 +1107,7 @@ a datem. Předchozí verze zásad zůstanou dostupné na stejné adrese.</p>
 <p>Adresa zveřejnění: szugers.com/harmo/polityka-prywatnosci.html.</p>
 
 <p class="foot">Harmo · Szugers · <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a><br>
+<a href="polityka-prywatnosci-2.2.html#cs">Verze 2.2 ze dne 22. listopadu 2026</a> výslovně neuváděla, že stavový řádek a oznámení v okně Harmo pro Chrome jsou ve výchozím stavu vypnuté, ani jak vypnout čtení oznámení, ani že klíče pro spárování a seznam aplikací s počty oznámení se do zálohy v Googlu nedostanou (body 3, 4, 5, 8, 9 a 10).<br>
 <a href="polityka-prywatnosci-2.1.html#cs">Verze 2.1 ze dne 21. listopadu 2026</a> nepopisovala stavový řádek telefonu ani stav telefonu a oznámení v okně Harmo pro Chrome (body 3, 4, 8 a 9).<br>
 <a href="polityka-prywatnosci-2.0.html#cs">Verze 2.0 ze dne 7. listopadu 2026</a> se lišila jen jednou větou v bodě 4: okno výběru zařízení v Chrome se ukáže při prvním spojení, potom se Chrome k telefonu připojuje sám.<br>
 <a href="polityka-prywatnosci-1.0.html#en">Předchozí verze (1.0 ze dne 22. října 2026, jen v polštině, angličtině, portugalštině a španělštině)</a> nezahrnovala
@@ -1045,7 +1117,7 @@ rozšíření Harmo pro Chrome ani přepínač „Záloha úkolů v Googlu“.</
 <!-- ============================== SK ============================== -->
 <section id="sk" lang="sk">
 <h1>Zásady ochrany osobných údajov Harmo</h1>
-<p class="sub">Verzia 2.2 z 22. novembra 2026. Platí pre aplikáciu Harmo pre Android, aplikáciu Harmo pre hodinky
+<p class="sub">Verzia 2.3 z 22. novembra 2026. Platí pre aplikáciu Harmo pre Android, aplikáciu Harmo pre hodinky
 s Wear OS (vrátane dlaždíc a komplikácií) a rozšírenie Harmo pre Chrome.</p>
 
 <div class="lead">
@@ -1077,10 +1149,11 @@ spracúvame, otvorene opisujeme v bodoch 6 a 7.</p>
   Ukladá ich databáza v pamäti telefónu, ku ktorej má prístup len Harmo.</li>
   <li><b>Nastavenia:</b> vzhľad, jazyk, čas spánku a vstávania, úvodné zobrazenie, vzhľad miniaplikácií, dátum prvého
   spustenia (na výpočet skúšobného obdobia) a informácia, či je Harmo kúpená.</li>
+  <li><b>Spojenie s počítačom:</b> kľúče na spárovanie s počítačmi, na ktorých používate Harmo pre Chrome.</li>
   <li><b>V hodinkách:</b> posledný plán dňa a Zoznam, ktoré hodinky dostali z telefónu.</li>
   <li><b>Upozornenia iných aplikácií</b> (len ak Harmo udelíte prístup k upozorneniam, pozri bod 4): názvy aplikácií,
   ktoré zobrazili upozornenie, počet ich upozornení za každý z posledných 7 dní a vaša voľba pri každej aplikácii
-  („Iba počet“, „Názov“ alebo „Obsah“). Obsah upozornení Harmo neukladá.</li>
+  („Iba počet“, „Názov“ alebo „Obsah“). Obsah upozornení Harmo neukladá. Bez prístupu k upozorneniam Harmo upozornenia nečíta a žiadne z týchto údajov neukladá.</li>
   <li><b>V Chrome:</b> kľúče na spárovanie s vaším telefónom a nastavenia zobrazenia. Samotný plán, stav telefónu
   a upozornenia z telefónu sú v Chrome len v pamäti, kým je otvorená karta Harmo.</li>
 </ul>
@@ -1103,11 +1176,19 @@ spárovanie sú uložené len lokálne v Chrome (nesynchronizujú sa s účtom G
 <p>Keď je telefón pripojený k počítaču, Android zobrazuje trvalé upozornenie Harmo. Systém to vyžaduje pri službách
 bežiacich na pozadí.</p>
 
-<h3>Stavový riadok telefónu</h3>
-<p>Ak v Nastaveniach Harmo zapnete stavový riadok, telefón zobrazí vo svojom stavovom riadku dátum a štvorec s počtom
-upozornení iných aplikácií. Každá z týchto ikon je trvalé upozornenie Harmo. Na počítanie upozornení potrebuje Harmo
-prístup k upozorneniam, ktorý zapínate sami v nastaveniach Androidu. Skôr ako vás Harmo do týchto nastavení prenesie,
-vysvetlí, čo bude počítať a čo uloží.</p>
+<h3>Stavový riadok a upozornenia telefónu: len ak chcete</h3>
+<p>Dátum a štvorec v stavovom riadku a upozornenia telefónu v okne Harmo pre Chrome sú <b>predvolene vypnuté</b>.
+Fungujú až vtedy, keď ich zapnete. Dátum a štvorec zapínate v Nastaveniach Harmo, v časti „Stavový riadok“. Štvorec
+a upozornenia v okne Harmo pre Chrome fungujú až potom, ako Harmo dáte prístup k upozorneniam v nastaveniach Androidu.
+Bez tohto prístupu Harmo upozornenia iných aplikácií nečíta.</p>
+<p>Každá ikona v stavovom riadku je trvalé upozornenie Harmo. Skôr ako vás Harmo prenesie do nastavení Androidu, ukáže
+okno „Prístup k upozorneniam“: čo bude počítať, čo a kam posiela, čo uloží a ako prístup odobrať. Rovnaký text je pod
+ikonou informácií pri prepínači „Štvorec namiesto iných upozornení“.</p>
+<p><b>Ako vypnúť čítanie upozornení.</b> Prístup k upozorneniam môžete kedykoľvek odobrať v nastaveniach Androidu, tam,
+kde sa zapína. Potom Harmo prestane upozornenia čítať a štvorec aj upozornenia v okne Harmo pre Chrome prestanú fungovať.
+Samotné vypnutie štvorca v Harmo len skryje ikonu, prístup neodoberie: kým je prístup udelený, Harmo ďalej počíta
+upozornenia pre okno Harmo pre Chrome. Skôr uložené počty zostávajú v telefóne, kým nevymažete údaje aplikácie alebo ju
+neodinštalujete.</p>
 <h3>Stav telefónu a upozornenia v okne Harmo pre Chrome</h3>
 <p>Keď je telefón pripojený k počítaču, posiela do okna Harmo pre Chrome svoj stav: úroveň batérie, či sa nabíja, typ
 siete, silu signálu Wi-Fi a mobilnej siete a počet upozornení. Ak Harmo udelíte prístup k upozorneniam, okno zobrazuje
@@ -1117,7 +1198,7 @@ upozornenia sa do okna dostane len z aplikácií, pri ktorých v okne sami zvol�
 ktoré aplikácia alebo vy označíte ako tajné, sa do okna dostanú len ako počet. Pri dôverných upozorneniach, ktorých
 obsah telefón skrýva na uzamknutej obrazovke, Harmo neposiela text, kým je v okne zapnuté „Skrývať obsah dôverných“.
 Prepínač „Zobrazovať upozornenia v okne“ zoznam vypne a nechá len počty.</p>
-<p>To všetko ide rovnakým šifrovaným spojením Bluetooth ako plán, len do vášho spárovaného počítača, a zmizne
+<p>Upozornenia neopúšťajú vaše zariadenia: telefón a spárovaný počítač. Harmo ich neposiela na internet, nám ani nikomu inému. To všetko ide rovnakým šifrovaným spojením Bluetooth ako plán, len do vášho spárovaného počítača, a zmizne
 z Chrome, keď zatvoríte kartu Harmo. Keď v okne pri upozornení kliknete na „Zavrieť“, Harmo ho zavrie aj v telefóne,
 ak túto možnosť v okne nevypnete.</p>
 
@@ -1133,6 +1214,9 @@ vášho účtu Google a my k nej nemáme prístup. Čo sa do zálohy dostane, z�
   sa po preinštalovaní skúšobné obdobie ani kúpa nezačínajú odznova. Zálohu môžete kedykoľvek vypnúť v nastaveniach
   Androidu.</li>
 </ul>
+<p>Od Harmo 0.4.27 sa do zálohy v Googli nikdy nedostanú dve veci, ani pri zapnutom prepínači „Záloha úloh
+v Googli“: kľúče na spárovanie s počítačmi a zoznam aplikácií s počtami upozornení spolu s vaším výberom pri každej
+aplikácii. Po obnovení zálohy v novom telefóne preto musíte počítač spárovať znova a zoznam aplikácií začína od nuly.</p>
 <p>Keď údaje prenášate do nového telefónu káblom alebo priamo z telefónu do telefónu, Android prenesie celý plán,
 pretože údaje pritom neopustia vaše zariadenia.</p>
 <p>Zálohu vo vašom účte Google uchováva a chráni Google podľa
@@ -1161,7 +1245,7 @@ predpisy nevyžadujú jej uchovanie. Vaše práva k týmto údajom opisuje bod 1
   <tr><td>Služba v popredí (pripojené zariadenie)</td><td>Udržanie spojenia s počítačom, keď Harmo nie je otvorená.</td></tr>
   <tr><td>Služba v popredí (špeciálne použitie)</td><td>Ikony dátumu a štvorca v stavovom riadku, ak ich zapnete. Od Androidu 14 sa bežné trvalé upozornenie dá zavrieť gestom, zatiaľ čo ikona služby v popredí zostane, až kým ju v Harmo nevypnete.</td></tr>
   <tr><td>Upozornenia</td><td>Trvalé upozornenie, keď je telefón pripojený k počítaču, a ikony stavového riadku.</td></tr>
-  <tr><td>Prístup k upozorneniam</td><td>Počet upozornení iných aplikácií vo štvorci na stavovom riadku a upozornenia telefónu v okne Harmo pre Chrome (bod 4). Zapínate ho sami v nastaveniach Androidu a tam ho môžete vypnúť.</td></tr>
+  <tr><td>Prístup k upozorneniam</td><td>Predvolene vypnutý. Počet upozornení iných aplikácií vo štvorci na stavovom riadku a upozornenia telefónu v okne Harmo pre Chrome (bod 4). Udeľujete ho v nastaveniach Androidu a tam ho môžete kedykoľvek odobrať. Potom Harmo prestane upozornenia čítať.</td></tr>
   <tr><td>Stav siete</td><td>Typ siete a sila signálu Wi-Fi v stave telefónu, ktorý vidíte v okne Harmo pre Chrome. Toto povolenie nedáva prístup na internet.</td></tr>
   <tr><td>Spustenie po štarte</td><td>Obnovenie spojenia s počítačom a ikon stavového riadku po reštarte telefónu alebo aktualizácii Harmo.</td></tr>
 </table>
@@ -1185,8 +1269,9 @@ stiahnuté súbory. Celý kód je súčasťou rozšírenia; žiadny kód nesťah
   <li><b>Predvolená ochrana.</b> Záloha úloh v Googli je predvolene vypnutá (pozri <a href="#sk-kopia">bod 5</a>)
   a Harmo nežiada o žiadne povolenie „pre istotu“. Aplikácia neobsahuje reklamné, analytické knižnice ani knižnice na
   hlásenie pádov.</li>
-  <li><b>Upozornenia.</b> Harmo číta upozornenia len na to, aby ich spočítala, a ak si to zvolíte, zobrazila ich v okne
-  Harmo pre Chrome. Ich obsah sa nikam neukladá a predvolene žiadna aplikácia neodovzdáva do okna nič okrem počtu.</li>
+  <li><b>Upozornenia.</b> Harmo číta upozornenia len vtedy, keď jej dáte prístup k upozorneniam, a len na to, aby ich spočítala, a ak si
+  to zvolíte, ukázala v okne Harmo pre Chrome. Neopúšťajú váš telefón a spárovaný počítač. Ich obsah sa nikde neukladá
+  a predvolene žiadna aplikácia neposiela do okna nič okrem počtu.</li>
   <li><b>Lokálne spojenia.</b> Výmena údajov s hodinkami prebieha systémovým kanálom Wear OS v rámci vašich spárovaných
   zariadení a s počítačom cez Bluetooth, po vašom potvrdení v Chrome.</li>
 </ul>
@@ -1201,7 +1286,7 @@ neuchovávame, takže na našej strane nie je čo sprístupniť, opraviť ani vy
   <tr><td>Prístup</td><td>Prezeráte si úlohy, projekty a poznámky v aplikácii.</td></tr>
   <tr><td>Oprava</td><td>Upravíte úlohu, projekt alebo poznámku.</td></tr>
   <tr><td>Vymazanie</td><td>Vymažete záznam, vymažete údaje aplikácie v nastaveniach Androidu alebo Harmo odinštalujete. Zálohu v Googli vymažete vo svojom účte Google.</td></tr>
-  <tr><td>Obmedzenie a námietka</td><td>Vypnete „Záloha úloh v Googli“, odpojíte počítač alebo hodinky, odinštalujete aplikáciu.</td></tr>
+  <tr><td>Obmedzenie a námietka</td><td>Vypnete „Záloha úloh v Googli“, odpojíte počítač alebo hodinky, odinštalujete aplikáciu. Čítanie upozornení vypnete tak, že Harmo odoberiete prístup k upozorneniam v nastaveniach Androidu.</td></tr>
   <tr><td>Prenosnosť</td><td>Prenesiete údaje do nového telefónu káblom, priamo z telefónu do telefónu alebo cez zálohu Androidu.</td></tr>
 </table>
 <p>Pri údajoch, ktoré naozaj spracúvame (údaje o objednávke a korešpondencia, body 6 a 7), máte právo na prístup,
@@ -1229,6 +1314,7 @@ verzie a dátumom. Predchádzajúce verzie zásad zostanú dostupné na rovnakej
 <p>Adresa zverejnenia: szugers.com/harmo/polityka-prywatnosci.html.</p>
 
 <p class="foot">Harmo · Szugers · <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a><br>
+<a href="polityka-prywatnosci-2.2.html#sk">Verzia 2.2 z 22. novembra 2026</a> výslovne neuvádzala, že stavový riadok a upozornenia v okne Harmo pre Chrome sú predvolene vypnuté, ani ako vypnúť čítanie upozornení, ani že kľúče na spárovanie a zoznam aplikácií s počtami upozornení sa do zálohy v Googli nedostanú (body 3, 4, 5, 8, 9 a 10).<br>
 <a href="polityka-prywatnosci-2.1.html#sk">Verzia 2.1 z 21. novembra 2026</a> neopisovala stavový riadok telefónu ani stav telefónu a upozornenia v okne Harmo pre Chrome (body 3, 4, 8 a 9).<br>
 <a href="polityka-prywatnosci-2.0.html#sk">Verzia 2.0 zo 7. novembra 2026</a> sa líšila len jednou vetou v bode 4: okno výberu zariadenia v Chrome sa ukáže pri prvom spojení, potom sa Chrome k telefónu pripája sám.<br>
 <a href="polityka-prywatnosci-1.0.html#en">Predchádzajúca verzia (1.0 z 22. októbra 2026, len v poľštine, angličtine, portugalčine a španielčine)</a> nezahŕňala
@@ -1238,7 +1324,7 @@ rozšírenie Harmo pre Chrome ani prepínač „Záloha úloh v Googli“.</p>
 <!-- ============================== SL ============================== -->
 <section id="sl" lang="sl">
 <h1>Politika zasebnosti Harmo</h1>
-<p class="sub">Različica 2.2 z dne 22. novembra 2026. Velja za aplikacijo Harmo za Android, aplikacijo Harmo za ure
+<p class="sub">Različica 2.3 z dne 22. novembra 2026. Velja za aplikacijo Harmo za Android, aplikacijo Harmo za ure
 z Wear OS (vključno s ploščicami in zapleti) in razširitev Harmo za Chrome.</p>
 
 <div class="lead">
@@ -1270,10 +1356,11 @@ opisujemo v točkah 6 in 7.</p>
   čas, napredek. Shranjuje jih podatkovna zbirka v pomnilniku telefona, do katere ima dostop le Harmo.</li>
   <li><b>Nastavitve:</b> videz, jezik, čas spanja in vstajanja, začetni pogled, videz pripomočkov, datum prvega zagona
   (za štetje preizkusnega obdobja) in podatek, ali je Harmo kupljena.</li>
+  <li><b>Povezava z računalnikom:</b> ključi za seznanitev z računalniki, na katerih uporabljate Harmo za Chrome.</li>
   <li><b>Na uri:</b> zadnji načrt dneva in Seznam, ki ju je ura prejela s telefona.</li>
   <li><b>Obvestila drugih aplikacij</b> (le če Harmo dovolite dostop do obvestil, glejte točko 4): imena aplikacij,
   ki so prikazale obvestilo, število njihovih obvestil za vsakega od zadnjih 7 dni in vaša izbira pri vsaki aplikaciji
-  (»Samo število«, »Naslov« ali »Vsebina«). Vsebine obvestil Harmo ne shranjuje.</li>
+  (»Samo število«, »Naslov« ali »Vsebina«). Vsebine obvestil Harmo ne shranjuje. Brez dostopa do obvestil Harmo obvestil ne bere in nobenega od teh podatkov ne shranjuje.</li>
   <li><b>V Chromu:</b> ključi za seznanitev z vašim telefonom in nastavitve pogleda. Sam načrt, stanje telefona
   in obvestila s telefona so v Chromu le v pomnilniku, dokler je zavihek Harmo odprt.</li>
 </ul>
@@ -1296,11 +1383,19 @@ seznanitev so shranjeni le lokalno v Chromu (ne sinhronizirajo se z Google Raču
 <p>Ko je telefon povezan z računalnikom, Android prikazuje stalno obvestilo Harmo. Sistem to zahteva za storitve,
 ki delujejo v ozadju.</p>
 
-<h3>Vrstica stanja telefona</h3>
-<p>Če v Nastavitvah Harmo vklopite vrstico stanja, telefon v svoji vrstici stanja prikaže datum in kvadrat s številom
-obvestil drugih aplikacij. Vsaka od teh ikon je stalno obvestilo Harmo. Za štetje obvestil Harmo potrebuje dostop do
-obvestil, ki ga vklopite sami v nastavitvah Androida. Preden vas Harmo preusmeri v te nastavitve, pojasni, kaj bo štela
-in kaj bo shranila.</p>
+<h3>Vrstica stanja in obvestila telefona: samo če želite</h3>
+<p>Datum in kvadrat v vrstici stanja ter obvestila telefona v oknu Harmo za Chrome so <b>privzeto izklopljeni</b>.
+Delujejo šele, ko jih vklopite. Datum in kvadrat vklopite v Nastavitvah Harmo, v delu »Vrstica stanja«. Kvadrat in
+obvestila v oknu Harmo za Chrome delujejo šele, ko Harmo daste dostop do obvestil v nastavitvah Androida. Brez tega
+dostopa Harmo obvestil drugih aplikacij ne bere.</p>
+<p>Vsaka ikona v vrstici stanja je stalno obvestilo Harmo. Preden vas Harmo preusmeri v nastavitve Androida, pokaže okno
+»Dostop do obvestil«: kaj bo štela, kaj in kam pošilja, kaj bo shranila in kako dostop prekličete. Isto besedilo je pod
+ikono z informacijami ob stikalu »Kvadrat namesto drugih obvestil«.</p>
+<p><b>Kako izklopite branje obvestil.</b> Dostop do obvestil lahko kadar koli prekličete v nastavitvah Androida, tam,
+kjer ga vklopite. Takrat Harmo preneha brati obvestila, kvadrat in obvestila v oknu Harmo za Chrome pa prenehajo
+delovati. Samo izklop kvadrata v Harmo skrije ikono, dostopa pa ne prekliče: dokler je dostop odobren, Harmo še naprej
+šteje obvestila za okno Harmo za Chrome. Prej shranjena števila ostanejo v telefonu, dokler ne izbrišete podatkov
+aplikacije ali je ne odstranite.</p>
 <h3>Stanje telefona in obvestila v oknu Harmo za Chrome</h3>
 <p>Ko je telefon povezan z računalnikom, v okno Harmo za Chrome pošilja svoje stanje: raven baterije, ali se polni,
 vrsto omrežja, moč signala Wi-Fi in mobilnega omrežja ter število obvestil. Če Harmo dovolite dostop do obvestil, okno
@@ -1310,7 +1405,7 @@ katerem izberete, kaj se prikaže. Privzeto okno pri vsaki aplikaciji prikazuje 
 »Vsebina«. Obvestila, ki jih je aplikacija ali ste jih vi označili kot skrivna, pridejo v okno le kot število. Pri
 zaupnih obvestilih, katerih vsebino telefon na zaklenjenem zaslonu skrije, Harmo ne pošlje besedila, dokler je v oknu
 vklopljeno »Skrij vsebino zaupnih«. Stikalo »Prikaži obvestila v oknu« seznam izklopi in pusti le števila.</p>
-<p>Vse to potuje po isti šifrirani povezavi Bluetooth kot načrt, le do vašega seznanjenega računalnika, in izgine iz
+<p>Obvestila ne zapustijo vaših naprav: telefona in seznanjenega računalnika. Harmo jih ne pošilja na internet, nam ali komurkoli drugemu. Vse to potuje po isti šifrirani povezavi Bluetooth kot načrt, le do vašega seznanjenega računalnika, in izgine iz
 Chroma, ko zaprete zavihek Harmo. Ko v oknu pri obvestilu kliknete »Opusti«, ga Harmo zapre tudi v telefonu, razen če
 to možnost v oknu izklopite.</p>
 
@@ -1327,6 +1422,10 @@ kopija se shrani v vaš Google Račun, mi pa do nje nimamo dostopa. Kaj pride v 
   o nakupu. Tako se po ponovni namestitvi preizkusno obdobje in nakup ne začneta znova. Varnostno kopiranje lahko kadar
   koli izklopite v nastavitvah Androida.</li>
 </ul>
+<p>Od Harmo 0.4.27 dve stvari nikoli ne gresta v varnostno kopijo v Googlu, tudi ko je stikalo »Varnostna kopija
+opravil v Googlu« vklopljeno: ključi za seznanitev z računalniki in seznam aplikacij s števili obvestil, skupaj z vašo
+izbiro pri vsaki aplikaciji. Po obnovitvi kopije v novem telefonu morate zato računalnik znova seznaniti, seznam
+aplikacij pa se začne znova.</p>
 <p>Ko podatke prenesete na nov telefon s kablom ali neposredno s telefona na telefon, Android prenese ves načrt, ker
 podatki pri tem ne zapustijo vaših naprav.</p>
 <p>Varnostno kopijo v vašem Google Računu hrani in varuje Google v skladu s
@@ -1355,7 +1454,7 @@ zahtevajo njeno hrambo. Vaše pravice glede teh podatkov opisuje točka 10.</p>
   <tr><td>Storitev v ospredju (povezana naprava)</td><td>Ohranjanje povezave z računalnikom, ko Harmo ni odprta.</td></tr>
   <tr><td>Storitev v ospredju (posebna uporaba)</td><td>Ikone datuma in kvadrata v vrstici stanja, če jih vklopite. Od Androida 14 je navadno stalno obvestilo mogoče opustiti s potezo, ikona storitve v ospredju pa ostane, dokler je v Harmo ne izklopite.</td></tr>
   <tr><td>Obvestila</td><td>Stalno obvestilo, ko je telefon povezan z računalnikom, in ikone vrstice stanja.</td></tr>
-  <tr><td>Dostop do obvestil</td><td>Število obvestil drugih aplikacij v kvadratu v vrstici stanja in obvestila telefona v oknu Harmo za Chrome (točka 4). Vklopite ga sami v nastavitvah Androida in ga tam lahko izklopite.</td></tr>
+  <tr><td>Dostop do obvestil</td><td>Privzeto izklopljen. Število obvestil drugih aplikacij v kvadratu v vrstici stanja in obvestila telefona v oknu Harmo za Chrome (točka 4). Odobrite ga v nastavitvah Androida in ga tam lahko kadar koli prekličete. Takrat Harmo preneha brati obvestila.</td></tr>
   <tr><td>Stanje omrežja</td><td>Vrsta omrežja in moč signala Wi-Fi v stanju telefona, ki ga vidite v oknu Harmo za Chrome. To dovoljenje ne daje dostopa do interneta.</td></tr>
   <tr><td>Zagon ob vklopu</td><td>Ponovna vzpostavitev povezave z računalnikom in ikon vrstice stanja po ponovnem zagonu telefona ali posodobitvi Harmo.</td></tr>
 </table>
@@ -1379,9 +1478,9 @@ prenose. Vsa koda je v paketu razširitve; iz omrežja ne nalaga nobene kode.</p
   <li><b>Privzeta zaščita.</b> Varnostna kopija opravil v Googlu je privzeto izklopljena (glejte
   <a href="#sl-kopia">točko 5</a>), Harmo pa ne zahteva nobenega dovoljenja »za vsak primer«. Aplikacija ne vsebuje
   knjižnic za oglaševanje, analitiko ali poročanje o zrušitvah.</li>
-  <li><b>Obvestila.</b> Harmo bere obvestila le zato, da jih prešteje in, če tako izberete, prikaže v oknu Harmo za
-  Chrome. Njihova vsebina se nikamor ne shranjuje, privzeto pa nobena aplikacija v okno ne preda ničesar razen
-  števila.</li>
+  <li><b>Obvestila.</b> Harmo bere obvestila samo, če ji daste dostop do obvestil, in samo zato, da jih prešteje in, če tako izberete,
+  prikaže v oknu Harmo za Chrome. Ne zapustijo vašega telefona in seznanjenega računalnika. Njihova vsebina se nikjer ne
+  shranjuje, privzeto pa nobena aplikacija v okno ne posreduje ničesar razen števila.</li>
   <li><b>Lokalne povezave.</b> Izmenjava podatkov z uro poteka po sistemskem kanalu Wear OS med vašimi seznanjenimi
   napravami, z računalnikom pa prek Bluetootha, potem ko jo potrdite v Chromu.</li>
 </ul>
@@ -1396,7 +1495,7 @@ načrta ne hranimo, zato pri nas ni ničesar, kar bi lahko posredovali, popravil
   <tr><td>Dostop</td><td>Opravila, projekte in zapiske si ogledate v aplikaciji.</td></tr>
   <tr><td>Popravek</td><td>Uredite opravilo, projekt ali zapisek.</td></tr>
   <tr><td>Izbris</td><td>Izbrišete vnos, izbrišete podatke aplikacije v nastavitvah Androida ali odstranite Harmo. Kopijo v Googlu izbrišete v svojem Google Računu.</td></tr>
-  <tr><td>Omejitev in ugovor</td><td>Izklopite »Varnostna kopija opravil v Googlu«, odklopite računalnik ali uro, odstranite aplikacijo.</td></tr>
+  <tr><td>Omejitev in ugovor</td><td>Izklopite »Varnostna kopija opravil v Googlu«, odklopite računalnik ali uro, odstranite aplikacijo. Branje obvestil izklopite tako, da Harmo prekličete dostop do obvestil v nastavitvah Androida.</td></tr>
   <tr><td>Prenosljivost</td><td>Podatke prenesete na nov telefon s kablom, neposredno s telefona na telefon ali prek varnostne kopije Androida.</td></tr>
 </table>
 <p>Glede podatkov, ki jih dejansko obdelujemo (podatki o naročilu in korespondenca, točki 6 in 7), imate pravico do
@@ -1424,6 +1523,7 @@ različice in datumom. Prejšnje različice politike bodo ostale dostopne na ist
 <p>Naslov objave: szugers.com/harmo/polityka-prywatnosci.html.</p>
 
 <p class="foot">Harmo · Szugers · <a href="mailto:bartosz@pietrzkowski.com">bartosz@pietrzkowski.com</a><br>
+<a href="polityka-prywatnosci-2.2.html#sl">Različica 2.2 z dne 22. novembra 2026</a> ni izrecno navajala, da sta vrstica stanja in obvestila v oknu Harmo za Chrome privzeto izklopljena, niti kako izklopite branje obvestil, niti da ključi za seznanitev in seznam aplikacij s števili obvestil ne gredo v varnostno kopijo v Googlu (točke 3, 4, 5, 8, 9 in 10).<br>
 <a href="polityka-prywatnosci-2.1.html#sl">Različica 2.1 z dne 21. novembra 2026</a> ni opisovala vrstice stanja telefona ter stanja telefona in obvestil v oknu Harmo za Chrome (točke 3, 4, 8 in 9).<br>
 <a href="polityka-prywatnosci-2.0.html#sl">Različica 2.0 z dne 7. novembra 2026</a> se je razlikovala le v enem stavku v točki 4: Chromovo okno za izbiro naprave se prikaže pri prvi povezavi, nato se Chrome s telefonom poveže sam.<br>
 <a href="polityka-prywatnosci-1.0.html#en">Prejšnja različica (1.0 z dne 22. oktobra 2026, le v poljščini, angleščini, portugalščini in španščini)</a> ni zajemala
